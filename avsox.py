@@ -48,7 +48,7 @@ def getRuntime(a):
     return result1
 
 
-def getLabel(a):
+def getSeries(a):
     html = etree.fromstring(a, etree.HTMLParser())  # //table/tr[1]/td[1]/text()
     result1 = str(html.xpath('//p[contains(text(),"系列:")]/following-sibling::p[1]/a/text()')).strip(" ['']")
     return result1
@@ -120,6 +120,7 @@ def main(number):
             'actor': getActor(web),
             'title': getTitle(web).strip(getNum(web)).strip().replace(' ', '-'),
             'studio': getStudio(info),
+            'publisher': '',
             'outline': '',  #
             'runtime': getRuntime(info),
             'director': '',  #
@@ -129,7 +130,7 @@ def main(number):
             'cover_small': getCover_small(a),
             'imagecut': 3,
             'tag': getTag(web),
-            'label': getLabel(info),
+            'series': getSeries(info),
             'year': getYear(getRelease(info)),  # str(re.search('\d{4}',getRelease(a)).group()),
             'actor_photo': getActorPhoto(web),
             'website': result1,

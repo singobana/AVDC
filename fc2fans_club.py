@@ -95,6 +95,7 @@ def main(number):
         dic = {
             'title': getTitle(htmlcode).replace(' ', '-'),
             'studio': getStudio(htmlcode),
+            'publisher': '',
             'year': '',  # str(re.search('\d{4}',getRelease(number)).group()),
             'outline': getOutline(htmlcode2).replace('\n', ''),
             'runtime': getYear(getRelease(htmlcode)),
@@ -104,7 +105,7 @@ def main(number):
             'number': 'FC2-' + number,
             'cover': getCover(htmlcode, number, htmlcode2),
             'imagecut': 0,
-            'label': '',
+            'series': '',
             'tag': getTag(htmlcode),
             'actor_photo': getActorPhoto(actor),
             'website': 'https://fc2club.com//html/FC2-' + number + '.html',

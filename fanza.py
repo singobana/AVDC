@@ -42,18 +42,27 @@ def getStudio(a):
     return result1
 
 
+def getPublisher(a):
+    html = etree.fromstring(a, etree.HTMLParser())  # //table/tr[1]/td[1]/text()
+    try:
+        result1 = html.xpath("//td[contains(text(),'レーベル')]/following-sibling::td/a/text()")[0]
+    except:
+        result1 = html.xpath("//td[contains(text(),'レーベル')]/following-sibling::td/text()")[0]
+    return result1
+
+
 def getRuntime(a):
     html = etree.fromstring(a, etree.HTMLParser())  # //table/tr[1]/td[1]/text()
     result1 = html.xpath("//td[contains(text(),'収録時間')]/following-sibling::td/text()")[0]
     return re.search('\d+', str(result1)).group()
 
 
-def getLabel(a):
+def getSeries(a):
     html = etree.fromstring(a, etree.HTMLParser())  # //table/tr[1]/td[1]/text()
     try:
-        result1 = html.xpath("//td[contains(text(),'レーベル：')]/following-sibling::td/a/text()")[0]
+        result1 = html.xpath("//td[contains(text(),'シリーズ：')]/following-sibling::td/a/text()")[0]
     except:
-        result1 = html.xpath("//td[contains(text(),'レーベル：')]/following-sibling::td/text()")[0]
+        result1 = html.xpath("//td[contains(text(),'シリーズ：')]/following-sibling::td/text()")[0]
     return result1
 
 
@@ -124,6 +133,7 @@ def main(number):
         dic = {
             'title': getTitle(htmlcode).strip(getActor(htmlcode)),
             'studio': getStudio(htmlcode),
+            'publisher': getPublisher(htmlcode),
             'outline': getOutline(htmlcode).replace('\n', ''),
             'runtime': getRuntime(htmlcode),
             'director': getDirector(htmlcode),
@@ -133,11 +143,11 @@ def main(number):
             'cover': getCover(htmlcode, number),
             'imagecut': 1,
             'tag': getTag(htmlcode),
-            'label': getLabel(htmlcode),
+            'series': getSeries(htmlcode),
             'year': getYear(getRelease(htmlcode)),  # str(re.search('\d{4}',getRelease(a)).group()),
             'actor_photo': getActorPhoto(actor),
             'website': url,
-            'source': 'siro.py',
+            'source': 'fanza.py',
         }
     except:
         if htmlcode == 'ProxyError':
@@ -155,4 +165,4 @@ def main(number):
 
 # main('DV-1562')
 # input("[+][+]Press enter key exit, you can check the error messge before you exit.\n[+][+]按回车键结束，你可以在结束之前查看和错误信息。")
-# print(main('ssni00684'))
+# print(main('mide00139'))

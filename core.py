@@ -118,8 +118,9 @@ def getDataFromJSON(file_number, config, mode):  # 从JSON返回元数据
         cover_small = tmpArr[0].strip('\"').strip('\'')
     # ====================处理异常字符 END================== #\/:*?"<>|
 
-    naming_rule = config['Name_Rule']['naming_rule']
-    location_rule = config['Name_Rule']['location_rule']
+    naming_media = config['Name_Rule']['naming_media']
+    naming_file = config['Name_Rule']['naming_file']
+    folder_name = config['Name_Rule']['folder_name']
 
     # 返回处理后的json_data
     json_data['title'] = title
@@ -128,8 +129,9 @@ def getDataFromJSON(file_number, config, mode):  # 从JSON返回元数据
     json_data['release'] = release
     json_data['cover_small'] = cover_small
     json_data['tag'] = tag
-    json_data['naming_rule'] = naming_rule
-    json_data['location_rule'] = location_rule
+    json_data['naming_media'] = naming_media
+    json_data['naming_file'] = naming_file
+    json_data['folder_name'] = folder_name
     return json_data
 
 
@@ -139,6 +141,7 @@ def get_info(json_data):  # 返回json里的数据
             value = 'unknown'
     title = json_data['title']
     studio = json_data['studio']
+    publisher = json_data['publisher']
     year = json_data['year']
     outline = json_data['outline']
     runtime = json_data['runtime']
@@ -150,5 +153,5 @@ def get_info(json_data):  # 返回json里的数据
     number = json_data['number']
     cover = json_data['cover']
     website = json_data['website']
-    label = json_data['label']
-    return title, studio, year, outline, runtime, director, actor_photo, actor, release, tag, number, cover, website, label
+    series = json_data['series']
+    return title, studio, publisher, year, outline, runtime, director, actor_photo, actor, release, tag, number, cover, website, series

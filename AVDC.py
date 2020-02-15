@@ -125,16 +125,16 @@ class Ui_AVDV(object):
         self.label_director.setLineWidth(1)
         self.label_director.setText("")
         self.label_director.setObjectName("label_director")
-        self.label_runtime = QtWidgets.QLabel(self.page_avdc)
-        self.label_runtime.setGeometry(QtCore.QRect(580, 120, 201, 39))
-        self.label_runtime.setFrameShape(QtWidgets.QFrame.Box)
-        self.label_runtime.setText("")
-        self.label_runtime.setObjectName("label_runtime")
+        self.label_publish = QtWidgets.QLabel(self.page_avdc)
+        self.label_publish.setGeometry(QtCore.QRect(580, 170, 201, 39))
+        self.label_publish.setFrameShape(QtWidgets.QFrame.Box)
+        self.label_publish.setText("")
+        self.label_publish.setObjectName("label_publish")
         self.label_23 = QtWidgets.QLabel(self.page_avdc)
         self.label_23.setGeometry(QtCore.QRect(210, 120, 81, 39))
         self.label_23.setObjectName("label_23")
         self.label_24 = QtWidgets.QLabel(self.page_avdc)
-        self.label_24.setGeometry(QtCore.QRect(500, 120, 81, 39))
+        self.label_24.setGeometry(QtCore.QRect(500, 170, 81, 39))
         self.label_24.setObjectName("label_24")
         self.label_studio = QtWidgets.QLabel(self.page_avdc)
         self.label_studio.setGeometry(QtCore.QRect(290, 170, 201, 39))
@@ -143,7 +143,7 @@ class Ui_AVDV(object):
         self.label_studio.setText("")
         self.label_studio.setObjectName("label_studio")
         self.label_label = QtWidgets.QLabel(self.page_avdc)
-        self.label_label.setGeometry(QtCore.QRect(580, 170, 201, 39))
+        self.label_label.setGeometry(QtCore.QRect(580, 120, 201, 39))
         self.label_label.setFrameShape(QtWidgets.QFrame.Box)
         self.label_label.setText("")
         self.label_label.setObjectName("label_label")
@@ -151,7 +151,7 @@ class Ui_AVDV(object):
         self.label_30.setGeometry(QtCore.QRect(210, 170, 81, 39))
         self.label_30.setObjectName("label_30")
         self.label_31 = QtWidgets.QLabel(self.page_avdc)
-        self.label_31.setGeometry(QtCore.QRect(500, 170, 81, 39))
+        self.label_31.setGeometry(QtCore.QRect(500, 120, 81, 39))
         self.label_31.setObjectName("label_31")
         self.label_tag = QtWidgets.QLabel(self.page_avdc)
         self.label_tag.setGeometry(QtCore.QRect(290, 370, 491, 39))
@@ -252,13 +252,13 @@ class Ui_AVDV(object):
         self.page_setting = QtWidgets.QWidget()
         self.page_setting.setObjectName("page_setting")
         self.pushButton_save_config = QtWidgets.QPushButton(self.page_setting)
-        self.pushButton_save_config.setGeometry(QtCore.QRect(140, 630, 361, 28))
+        self.pushButton_save_config.setGeometry(QtCore.QRect(210, 660, 361, 28))
         self.pushButton_save_config.setObjectName("pushButton_save_config")
         self.groupBox_8 = QtWidgets.QGroupBox(self.page_setting)
-        self.groupBox_8.setGeometry(QtCore.QRect(10, 530, 761, 91))
+        self.groupBox_8.setGeometry(QtCore.QRect(10, 530, 761, 121))
         self.groupBox_8.setObjectName("groupBox_8")
         self.formLayoutWidget_4 = QtWidgets.QWidget(self.groupBox_8)
-        self.formLayoutWidget_4.setGeometry(QtCore.QRect(0, 20, 751, 61))
+        self.formLayoutWidget_4.setGeometry(QtCore.QRect(0, 20, 751, 110))
         self.formLayoutWidget_4.setObjectName("formLayoutWidget_4")
         self.formLayout_6 = QtWidgets.QFormLayout(self.formLayoutWidget_4)
         self.formLayout_6.setContentsMargins(0, 0, 0, 0)
@@ -275,6 +275,12 @@ class Ui_AVDV(object):
         self.lineEdit_media_name = QtWidgets.QLineEdit(self.formLayoutWidget_4)
         self.lineEdit_media_name.setObjectName("lineEdit_media_name")
         self.formLayout_6.setWidget(1, QtWidgets.QFormLayout.FieldRole, self.lineEdit_media_name)
+        self.label_45 = QtWidgets.QLabel(self.formLayoutWidget_4)
+        self.label_45.setObjectName("label_45")
+        self.formLayout_6.setWidget(2, QtWidgets.QFormLayout.LabelRole, self.label_45)
+        self.lineEdit_local_name = QtWidgets.QLineEdit(self.formLayoutWidget_4)
+        self.lineEdit_local_name.setObjectName("lineEdit_local_name")
+        self.formLayout_6.setWidget(2, QtWidgets.QFormLayout.FieldRole, self.lineEdit_local_name)
         self.groupBox_9 = QtWidgets.QGroupBox(self.page_setting)
         self.groupBox_9.setGeometry(QtCore.QRect(10, 400, 751, 121))
         self.groupBox_9.setObjectName("groupBox_9")
@@ -461,12 +467,12 @@ class Ui_AVDV(object):
         AVDV.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(AVDV)
-        self.stackedWidget.setCurrentIndex(4)
+        self.stackedWidget.setCurrentIndex(3)
         QtCore.QMetaObject.connectSlotsByName(AVDV)
 
     def retranslateUi(self, AVDV):
         _translate = QtCore.QCoreApplication.translate
-        AVDV.setWindowTitle(_translate("AVDV", "AVDC-3.6"))
+        AVDV.setWindowTitle(_translate("AVDV", "AVDC-3.7"))
         self.pushButton_start_cap.setText(_translate("AVDV", "开始"))
         self.textBrowser_warning.setHtml(_translate("AVDV", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
@@ -488,15 +494,16 @@ class Ui_AVDV(object):
         self.label_18.setText(_translate("AVDV", "简介："))
         self.label_20.setText(_translate("AVDV", "标题："))
         self.label_23.setText(_translate("AVDV", "导演："))
-        self.label_24.setText(_translate("AVDV", "时长："))
+        self.label_24.setText(_translate("AVDV", "发行："))
         self.label_30.setText(_translate("AVDV", "制作："))
         self.label_31.setText(_translate("AVDV", "系列："))
         self.label_33.setText(_translate("AVDV", "类别："))
         self.checkBox_cover.setText(_translate("AVDV", "显示封面(取消勾选后，立即关闭封面显示)"))
         self.label_progress.setText(_translate("AVDV", "0/0"))
-        self.groupBox_6.setTitle(_translate("AVDV", "视频移动"))
-        self.label_8.setText(_translate("AVDV", "程序所在目录的所有子目录(不包括排除目录)下的视频，移动到当前目录下。"))
-        self.pushButton_move_mp4.setText(_translate("AVDV", "视频移动"))
+        self.groupBox_6.setTitle(_translate("AVDV", "视频、字幕移动"))
+        self.label_8.setText(_translate("AVDV", "程序所在目录的所有子目录(不包括排除目录)下的视频及同名字幕，\n"
+"移动到当前目录下。"))
+        self.pushButton_move_mp4.setText(_translate("AVDV", "开始移动"))
         self.label_41.setText(_translate("AVDV", "排除目录："))
         self.groupBox_7.setTitle(_translate("AVDV", "单文件刮削"))
         self.label.setText(_translate("AVDV", "选择单个文件(程序目录下或者子目录下)，使用文件名做为番号进行刮削。"))
@@ -514,7 +521,7 @@ class Ui_AVDV(object):
         self.label_3.setText(_translate("AVDV", "Emby地址："))
         self.label_4.setText(_translate("AVDV", "API密钥："))
         self.label_5.setText(_translate("AVDV", "说明:\n"
-"   1、头像请放在程序目录下的Actor目录中。\n"
+"   1、头像请放在程序目录(AVDC目录)下的Actor目录中。\n"
 "   2、密钥创建方法：Emby控制台->高级->API密钥->添加(APP名称任意)。"))
         self.pushButton_show_pic_actor.setText(_translate("AVDV", "查看"))
         self.comboBox_pic_actor.setItemText(0, _translate("AVDV", "可添加头像的女优"))
@@ -531,6 +538,7 @@ class Ui_AVDV(object):
         self.groupBox_8.setTitle(_translate("AVDV", "命名规则"))
         self.label_43.setText(_translate("AVDV", "   目录命名：             "))
         self.label_44.setText(_translate("AVDV", "   视频标题(媒体库中)：   "))
+        self.label_45.setText(_translate("AVDV", "   视频标题(本地文件)：   "))
         self.groupBox_9.setTitle(_translate("AVDV", "代理设置"))
         self.label_25.setText(_translate("AVDV", "   代理:                 "))
         self.label_26.setText(_translate("AVDV", "   超时重试时间：         "))
@@ -602,13 +610,33 @@ class Ui_AVDV(object):
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'宋体\'; font-size:12pt; font-weight:600;\">6、命名规则</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'宋体\'; font-size:9.5pt; font-weight:600; background-color:#ffffff;\">  1、</span><span style=\" font-family:\'宋体\'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;\">目录命名</span><span style=\" font-family:\'宋体\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">：存放视频数据的目录名，支持</span><span style=\" font-family:\'宋体\'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;\">多层目录</span><span style=\" font-family:\'宋体\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">，支持</span><span style=\" font-family:\'宋体\'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;\">自定义符号</span><span style=\" font-family:\'宋体\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">，例：[actor]/studio/number-【title】。</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'宋体\'; font-size:9.5pt; font-weight:600; background-color:#ffffff;\">  2、</span><span style=\" font-family:\'宋体\'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;\">视频标题</span><span style=\" font-family:\'宋体\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">：nfo中的标题命名。例：</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">number-</span><span style=\" font-family:\'宋体\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">[</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">title</span><span style=\" font-family:\'宋体\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">]。可以自定义符号。</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'宋体\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">  可选项为</span><span style=\" font-family:\'宋体\'; font-size:9.5pt; color:#ff0000; background-color:#ffffff;\">title</span><span style=\" font-family:\'宋体\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">（片名）、</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#ff0000; background-color:#ffffff;\">actor</span><span style=\" font-family:\'宋体\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">（演员）、</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#ff0000; background-color:#ffffff;\">studio</span><span style=\" font-family:\'宋体\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">（公司）、</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#ff0000; background-color:#ffffff;\">director</span><span style=\" font-family:\'宋体\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">（导演）、</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#ff0000; background-color:#ffffff;\">release</span><span style=\" font-family:\'宋体\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">（发售日）、</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#ff0000; background-color:#ffffff;\">year</span><span style=\" font-family:\'宋体\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">（发行年份）、</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#ff0000; background-color:#ffffff;\">numbe</span><span style=\" font-family:\'宋体\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">（番号）、</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#ff0000; background-color:#ffffff;\">runtime</span><span style=\" font-family:\'宋体\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">（时长）、</span><span style=\" font-family:\'宋体\'; font-size:9.5pt; color:#ff0000; background-color:#ffffff;\">label</span><span style=\" font-family:\'宋体\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">（系列）</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'宋体\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">  </span><span style=\" font-family:\'宋体\'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;\">3、</span><span style=\" font-family:\'宋体\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">可选项为</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">title（片名）、actor（演员）、studio（制作商）、director（导演）、release（发售日）、year（发行年份）、number（番号）、runtime（时长）、</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;\">series（系列）、publisher（发行商）</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'宋体\'; font-size:9.5pt; color:#24292e;\"> </span></p>\n"
 "<h4 style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'宋体\'; font-size:12pt; font-weight:600;\">7、网站选择</span></h4>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">  1</span><span style=\" font-family:\'宋体\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">、</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;\">All website</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">: </span><span style=\" font-family:\'宋体\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">使用</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">avsox,javbus,fanza,javdb,fc2club</span><span style=\" font-family:\'宋体\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">进行刮削。</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\"><br />  2</span><span style=\" font-family:\'宋体\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">、</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;\">Only javdb</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">: </span><span style=\" font-family:\'宋体\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">仅使用</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">javdb</span><span style=\" font-family:\'宋体\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">进行刮削。</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'宋体\'; font-size:9.5pt; color:#24292e;\"> </span></p>\n"
 "<h1 style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'宋体\'; font-size:22pt; font-weight:600;\">四、更新日志</span></h1>\n"
 "<h1 style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'宋体\'; font-size:22pt; font-weight:600;\"><br /></h1>\n"
+"<h1 style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'宋体\'; font-size:18pt; font-weight:600; color:#ff0000;\">3.7</span></h1>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'宋体\'; font-size:11pt; font-weight:600;\">2020-02-15 19:30更新</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Segoe UI\'; font-size:11pt; font-weight:600; color:#24292e; background-color:#ffffff;\">可选项变更：</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">title（片名）、actor（演员）、studio（制作商）、director（导演）、release（发售日）、year（发行年份）、number（番号）、runtime（时长）、</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;\">series（系列）、publisher（发行商）</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Segoe UI\'; font-size:11pt; font-weight:600; color:#24292e; background-color:#ffffff;\">修复：</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">  1、修改javbus的抓取逻辑，成功率提高。</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">  2、更新</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;\">进度条</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">改为刮削完之后。</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">  3、不再强制替换‘_’为‘-’。</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">  4、EMBY添加头像时，演员有别名，</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;\">中文符号</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">导致添加失败。</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">  5、修复字幕移动，与视频文件同名的</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;\">字幕</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">，刮削完后会随视频一起移动。</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Segoe UI\'; font-size:11pt; font-weight:600; color:#24292e; background-color:#ffffff;\">新增：</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">  1、</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;\">自定义本地文件名</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">。</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">  2、获取</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;\">制作商，发行商</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">。</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">  3、标签加入</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;\">系列、发行商、制作商</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">(太多标签EMBY只显示一部分)。</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">  4、小工具-</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;\">视频移动</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">，会移动与视频文件同名的</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;\">字幕</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">。</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\"> </span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'宋体\'; font-size:18pt; font-weight:600; color:#ff0000;\">3.61</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'宋体\'; font-size:11pt; font-weight:600;\">2020-02-12-15:40更新</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Segoe UI\'; font-size:11pt; font-weight:600; color:#24292e; background-color:#ffffff;\">修复：</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">  1、</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;\">演员过多</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">导致文件夹创建失败。(只取</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;\">前三个</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">)<br />  2、avsox有多个封面图时导致失败。<br />  3、主页面-</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;\">封面开关</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">不管用。<br />  4、</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;\">制作商、导演</span><span style=\" font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e; background-color:#ffffff;\">抓取错误。</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Segoe UI\'; font-size:9.5pt; color:#24292e;\"><br /></p>\n"
 "<h1 style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'宋体\'; font-size:18pt; font-weight:600; color:#ff0000;\">3.6</span></h1>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'宋体\'; font-size:11pt; font-weight:600;\">2020-02-11 晚23点更新</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Segoe UI\'; font-size:11pt; font-weight:600; color:#24292e; background-color:#ffffff;\">新增：</span></p>\n"

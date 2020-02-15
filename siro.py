@@ -40,6 +40,15 @@ def getStudio(a):
     return str(result1 + result2).strip('+').replace("', '", '').replace('"', '')
 
 
+def getPublisher(a):
+    html = etree.fromstring(a, etree.HTMLParser())  # //table/tr[1]/td[1]/text()
+    result1 = str(html.xpath('//th[contains(text(),"レーベル：")]/../td/a/text()')).strip(" ['']").strip('\\n    ').strip(
+        '\\n')
+    result2 = str(html.xpath('//th[contains(text(),"レーベル：")]/../td/text()')).strip(" ['']").strip('\\n    ').strip(
+        '\\n')
+    return str(result1 + result2).strip('+').replace("', '", '').replace('"', '')
+
+
 def getRuntime(a):
     html = etree.fromstring(a, etree.HTMLParser())  # //table/tr[1]/td[1]/text()
     result1 = str(html.xpath('//th[contains(text(),"収録時間：")]/../td/a/text()')).strip(" ['']").strip('\\n    ').strip(
@@ -49,7 +58,7 @@ def getRuntime(a):
     return str(result1 + result2).strip('+').rstrip('mi')
 
 
-def getLabel(a):
+def getSeries(a):
     html = etree.fromstring(a, etree.HTMLParser())  # //table/tr[1]/td[1]/text()
     result1 = str(html.xpath('//th[contains(text(),"シリーズ：")]/../td/a/text()')).strip(" ['']").strip('\\n    ').strip(
         '\\n')
@@ -121,6 +130,7 @@ def main(number2):
         dic = {
             'title': getTitle(htmlcode).replace("\\n", '').replace('        ', ''),
             'studio': getStudio(a),
+            'publisher': getPublisher(a),
             'outline': getOutline(htmlcode).replace('\n', ''),
             'runtime': getRuntime(a),
             'director': '',
@@ -129,8 +139,8 @@ def main(number2):
             'number': getNum(a),
             'cover': getCover(htmlcode),
             'imagecut': 0,
-            'tag': getTag(a),
-            'label': getLabel(a).strip(','),
+            'tag': getTag(a).strip(','),
+            'series': getSeries(a).strip(','),
             'year': getYear(getRelease(a)),  # str(re.search('\d{4}',getRelease(a)).group()),
             'actor_photo': getActorPhoto(actor.split(',')),
             'website': 'https://www.mgstage.com/product/product_detail/' + str(number) + '/',
