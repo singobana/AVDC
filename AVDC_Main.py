@@ -1031,6 +1031,8 @@ class MyMAinWindow(QMainWindow, Ui_AVDV):
             json_data)
         if len(actor.split(',')) >= 15:
             actor = actor.split(',')[0] + ',' + actor.split(',')[1] + ',' + actor.split(',')[2] + '等演员'
+        if actor.find('N/A') > 0:
+            actor = 'unknown'
         location_rule = json_data['location_rule']
         path = location_rule.replace('title', title).replace('studio', studio).replace('year', year).replace('runtime',
                                                                                                              runtime).replace(
