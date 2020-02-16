@@ -43,7 +43,7 @@
 ### 主要功能
 * **日本电影元数据 抓取工具 | 刮削器**，配合本地影片管理软件EMBY,KODI，PLEX等管理本地影片，该软件起到分类与元数据抓取作用，利用元数据信息来分类，供本地影片分类整理使用。<br>
 * 可**批量抓取**，也可**单个抓取**。可抓取**子目录下视频**，**多集视频**（-cd1/-cd2）,带**字幕**作品（-c., -C.）。<br>
-* 目前可抓取网站：**javbus,javdb,avsox,fc2club,fanza**。<br>
+* 目前可抓取网站：**javlibrary,javbus,javdb,avsox,fc2club,fanza,siro(mgstage)**。<br>
 * 批量添加Emby演员头像。<br>
 
 ### 反馈
@@ -165,11 +165,11 @@
 ### 2.6.命名规则
   **1、目录命名**：存放视频数据的目录名，支持**多层目录**，支持**自定义符号**，例：[actor]/studio/number-【title】。<br>
   **2、视频标题**：nfo中的标题命名。例：number-[title]。可以自定义符号。<br>
-  **3、可选项**为title（片名）、actor（演员）、studio（公司）、director（导演）、release（发售日）、year（发行年份）、number（番号）、runtime（时长）、label（系列）<br>
+  **3、可选项**为title（片名）、actor（演员）、studio（制作商）、director（导演）、release（发售日）、year（发行年份）、number（番号）、runtime（时长）、series（系列）、publisher（发行商）<br>
 
 ---
 ### 2.7.网络设置 
->proxy=127.0.0.1:1081<br>
+>proxy=127.0.0.1:1080<br>
 
 * **proxy**行设置本地代理地址和端口，支持Shadowxxxx/X,V2XXX本地代理端口，代理软件开**全局模式**  ,**建议使用日本代理**。 <br>
 * 如果一直报Connect Failed! Please check your Proxy or Network!错误，请检查**端口号**是否正确，或者把**proxy=后面的地址和端口**删除，并开启代理软件**全局模式**，或者重启电脑，代理软件，网卡。<br>
@@ -194,14 +194,14 @@
 
 ---
 ### 2.11.网站选择
-**1、All website**: 使用avsox,javbus,fanza,javdb,fc2club，siro(mgstage)进行刮削。<br>
-**2、Only javdb**: 仅使用javdb进行刮削。<br>
+**1、All website**: 使用avsox,javbus,javlibrary,fanza,javdb,fc2club，siro(mgstage)进行刮削。<br>
+**2、Only javdb**: 仅使用javdb进行刮削。（尽量不要用，刮削30左右会被JAVDB封IP一段时间）<br>
 
 ---
 ### 2.10.工具
 **工具界面**
 ![](https://github.com/moyy996/AVDC/blob/master/readme/tool.png)
-**1、视频移动**：可将程序目录下除排除目录下的所有视频，移动到程序目录下。<br><br>
+**1、视频移动**：可将程序目录下除排除目录下的所有视频以及同名字幕，移动到程序目录下。<br><br>
 **2、单文件刮削**：偶尔有失败情况时，选择这个视频文件，使用文件名当番号进行刮削。<br>
 **建议**的使用流程：到某网站找到这个番号,把番号改成网站上的规范番号,选用对应的网站刮削。<br>
 **条件**：文件名至少与一个网站上的番号相同，没有多余的内容只有番号为最佳，可以让软件更好获取元数据。<br>
@@ -215,7 +215,7 @@
 可以遍历**程序所在目录及子目录**（除指定的**排除目录**），对遍历到的所有视频进行刮削，成功则同**元数据、封面图**一起输出到**JAV_output**目录，失败移入**failed**目录。 
 
 ## 4.多集影片处理
-可以把多集电影按照集数后缀命名为类似**ssni-xxx-cd1.mp4,ssni-xxx-cd2.mp4，abp-xxx-CD1.mp4**的规则，只要含有```-CDn./-cdn.```类似命名规则，即可使用分集功能
+可以把多集电影按照集数后缀命名为类似**ssni-xxx-cd1.mp4,ssni-xxx-cd2.mp4，abp-xxx-CD1.mp4**的规则，只要含有```-CDn./-cdn.```类似命名规则，即可使用分集功能.不支持A B _1 _ 2 -1 -2。
 
 ## 5.异常处理（重要）
 ### 请确保软件是完整地！确保ini文件内容是和下载提供ini文件内容的一致的！

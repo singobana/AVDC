@@ -205,6 +205,7 @@ class Ui_AVDV(object):
         self.comboBox_website.addItem("")
         self.comboBox_website.addItem("")
         self.comboBox_website.addItem("")
+        self.comboBox_website.addItem("")
         self.label_2 = QtWidgets.QLabel(self.groupBox_7)
         self.label_2.setGeometry(QtCore.QRect(230, 30, 72, 21))
         self.label_2.setObjectName("label_2")
@@ -467,7 +468,7 @@ class Ui_AVDV(object):
         AVDV.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(AVDV)
-        self.stackedWidget.setCurrentIndex(3)
+        self.stackedWidget.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(AVDV)
 
     def retranslateUi(self, AVDV):
@@ -514,7 +515,8 @@ class Ui_AVDV(object):
         self.comboBox_website.setItemText(3, _translate("AVDV", "avsox"))
         self.comboBox_website.setItemText(4, _translate("AVDV", "fc2club"))
         self.comboBox_website.setItemText(5, _translate("AVDV", "fanza"))
-        self.comboBox_website.setItemText(6, _translate("AVDV", "siro"))
+        self.comboBox_website.setItemText(6, _translate("AVDV", "siro(mgstage)"))
+        self.comboBox_website.setItemText(7, _translate("AVDV", "javlibrary"))
         self.label_2.setText(_translate("AVDV", "刮削网站:"))
         self.groupBox_12.setTitle(_translate("AVDV", "Emby-女优头像"))
         self.pushButton_add_actor_pic.setText(_translate("AVDV", "添加头像"))

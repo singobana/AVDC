@@ -10,7 +10,7 @@ import avsox
 import javbus
 import javdb
 import fanza
-
+import javlibrary
 
 # =====================本地文件处理===========================
 
@@ -52,15 +52,17 @@ def getDataFromJSON(file_number, config, mode):  # 从JSON返回元数据
             if getDataState(json_data) == 0:
                 json_data = json.loads(javdb.main(file_number))
         # =======================================================================ssni00321
-        elif re.match('\D{2,}00\d{3,}', file_number):
+        elif re.match('\D{2,}00\d{3,}', file_number) and '-' not in file_number and '_' not in file_number:
             json_data = json.loads(fanza.main(file_number))
         # =======================================================================MIDE-139
         else:
             json_data = json.loads(javbus.main(file_number))
             if getDataState(json_data) == 0:
-                json_data = json.loads(avsox.main(file_number))
+                json_data = json.loads(javlibrary.main(file_number, config['javlibrary_url']['url']))
             if getDataState(json_data) == 0:
                 json_data = json.loads(javdb.main(file_number))
+            if getDataState(json_data) == 0:
+                json_data = json.loads(avsox.main(file_number))
     elif mode != 6 and re.match('\D{2,}00\d{3,}', file_number):
         json_data = {
             'title': '',
@@ -82,6 +84,8 @@ def getDataFromJSON(file_number, config, mode):  # 从JSON返回元数据
         json_data = json.loads(fanza.main(file_number))
     elif mode == 7:  # 仅从siro
         json_data = json.loads(siro.main(file_number))
+    elif mode == 8:  # 仅从javlibrary
+        json_data = json.loads(javlibrary.main(file_number, config['javlibrary_url']['url']))
 
     # ================================================网站规则添加结束================================================
     # print(json_data)
@@ -90,8 +94,9 @@ def getDataFromJSON(file_number, config, mode):  # 从JSON返回元数据
         return json_data
     elif json_data['title'] == '':
         return json_data
+    # ======================================处理得到的信息
     title = json_data['title']
-    number = json_data['number'].replace('_', '-')
+    number = json_data['number']
     actor_list = str(json_data['actor']).strip("[ ]").replace("'", '').split(',')  # 字符串转列表
     release = json_data['release']
     try:
@@ -100,6 +105,8 @@ def getDataFromJSON(file_number, config, mode):  # 从JSON返回元数据
         cover_small = ''
     tag = str(json_data['tag']).strip("[ ]").replace("'", '').replace(" ", '').split(',')  # 字符串转列表 @
     actor = str(actor_list).strip("[ ]").replace("'", '').replace(" ", '')
+    if actor == '':
+        actor = 'Unknown'
 
     # ====================处理异常字符====================== #\/:*?"<>|
     title = title.replace('\\', '')
@@ -112,10 +119,15 @@ def getDataFromJSON(file_number, config, mode):  # 从JSON返回元数据
     title = title.replace('>', '')
     title = title.replace('|', '')
     title = title.replace(' ', '')
+    title = title.replace('【', '')
+    title = title.replace('】', '')
     release = release.replace('/', '-')
     tmpArr = cover_small.split(',')
     if len(tmpArr) > 0:
         cover_small = tmpArr[0].strip('\"').strip('\'')
+    for key, value in json_data.items():
+        if key == 'title' or key == 'studio' or key == 'director' or key == 'series' or key == 'publisher':
+            json_data[key] = str(value).replace('/', '')
     # ====================处理异常字符 END================== #\/:*?"<>|
 
     naming_media = config['Name_Rule']['naming_media']

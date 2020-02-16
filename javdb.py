@@ -198,5 +198,5 @@ def main(number):
 # print(main('LUXU-1217'))
 # input("[+][+]Press enter key exit, you can check the error messge before you exit.\n[+][+]按回车键结束，你可以在结束之前查看和错误信息。")
 # print(main('abs-141'))
-# print(main('040409-562'))
+# print(main('HYSD-00083'))
 # print(main('n1403'))

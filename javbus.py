@@ -90,8 +90,8 @@ def getDirector(htmlcode):  # 获取导演
 
 
 def getOutline(htmlcode):  # 获取简介
-    doc = pq(htmlcode)
-    result = str(doc('tr td div.mg-b20.lh4').text())
+    html = etree.fromstring(htmlcode, etree.HTMLParser())
+    result = str(html.xpath("//div[@class='mg-b20 lh4']/text()")).strip(" ['']")
     return result
 
 
@@ -197,7 +197,7 @@ def main(number):
             'studio': getStudio(htmlcode),
             'publisher': getPublisher(htmlcode),
             'year': getYear(getRelease(htmlcode)),
-            'outline': getOutline(dww_htmlcode).replace('\n', ''),
+            'outline': getOutline(dww_htmlcode).replace('\n', '').replace('\\n', '').replace('\'', '').replace(',', '').replace(' ', ''),
             'runtime': getRuntime(htmlcode).replace('分鐘', '').strip(),
             'director': getDirector(htmlcode),
             'actor': getActor(htmlcode),
@@ -279,6 +279,6 @@ def main_uncensored(number):
     return js
 
 # print(find_number('KA-001'))
-# print(main('ssni-145'))
+# print(main('OFJE-175'))
 # print(main_uncensored('122919-949'))
 # print(main_uncensored('012715-793'))

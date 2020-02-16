@@ -118,7 +118,7 @@ def getDirector(a):
 
 def getOutline(htmlcode):
     html = etree.fromstring(htmlcode, etree.HTMLParser())
-    result = str(html.xpath("//div[@class='mg-b20 lh4']/text()")[0]).replace('\n', '')
+    result = str(html.xpath("//div[@class='mg-b20 lh4']/text()")[0]).replace('\\n', '').replace('\n', '')
     return result
 
 
@@ -134,7 +134,7 @@ def main(number):
             'title': getTitle(htmlcode).strip(getActor(htmlcode)),
             'studio': getStudio(htmlcode),
             'publisher': getPublisher(htmlcode),
-            'outline': getOutline(htmlcode).replace('\n', ''),
+            'outline': getOutline(htmlcode),
             'runtime': getRuntime(htmlcode),
             'director': getDirector(htmlcode),
             'actor': actor,

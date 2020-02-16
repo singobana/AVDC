@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="page_avdc">
      <widget class="QPushButton" name="pushButton_start_cap">
@@ -664,7 +664,12 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <property name="text">
-         <string>siro</string>
+         <string>siro(mgstage)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>javlibrary</string>
         </property>
        </item>
       </widget>
