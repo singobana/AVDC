@@ -101,9 +101,20 @@ def getTag(a):
     return result1.replace("', '", ",")
 
 
-def getCover(htmlcode, number):
-    html = etree.fromstring(htmlcode, etree.HTMLParser())
-    result = html.xpath('//*[@id="' + number + '"]/@href')[0]
+def getCover(text, number):
+    html = etree.fromstring(text, etree.HTMLParser())
+    cover_number = number
+    if "_" in cover_number:
+        # fanza modify _ to \u0005f for image id
+        cover_number = cover_number.replace("_", r"\u005f")
+    try:
+        result = html.xpath('//*[@id="' + cover_number + '"]/@href')[0]
+    except:
+        # (TODO) handle more edge case
+        # print(html)
+        # raise exception here, same behavior as before
+        # people's major requirement is fetching the picture
+        raise ValueError("can not find image")
     return result
 
 
@@ -116,37 +127,72 @@ def getDirector(a):
     return result1
 
 
-def getOutline(htmlcode):
-    html = etree.fromstring(htmlcode, etree.HTMLParser())
-    result = str(html.xpath("//div[@class='mg-b20 lh4']/text()")[0]).replace('\\n', '').replace('\n', '')
+def getOutline(text):
+    html = etree.fromstring(text, etree.HTMLParser())
+    try:
+        result = str(html.xpath("//div[@class='mg-b20 lh4']/text()")[0]).replace(
+            "\n", ""
+        )
+        if result == "":
+            result = str(html.xpath("//div[@class='mg-b20 lh4']//p/text()")[0]).replace(
+                "\n", ""
+            )
+    except:
+        # (TODO) handle more edge case
+        # print(html)
+        return ""
     return result
 
 
 def main(number):
-    htmlcode = get_html('https://www.dmm.co.jp/digital/videoa/-/detail/=/cid=' + number)
-    url = 'https://www.dmm.co.jp/digital/videoa/-/detail/=/cid=' + number
-    if '404 Not Found' in htmlcode:
-        htmlcode = get_html('https://www.dmm.co.jp/mono/dvd/-/detail/=/cid=' + number)
-        url = 'https://www.dmm.co.jp/mono/dvd/-/detail/=/cid=' + number
+    # fanza allow letter + number + underscore, normalize the input here
+    # @note: I only find the usage of underscore as h_test123456789
+    fanza_search_number = number
+    # AV_Data_Capture.py.getNumber() over format the input, restore the h_ prefix
+    if fanza_search_number.startswith("h-"):
+        fanza_search_number = fanza_search_number.replace("h-", "h_")
+
+    fanza_search_number = re.sub(r"[^0-9a-zA-Z_]", "", fanza_search_number).lower()
+
+    fanza_urls = [
+        "https://www.dmm.co.jp/digital/videoa/-/detail/=/cid=",
+        "https://www.dmm.co.jp/mono/dvd/-/detail/=/cid=",
+        "https://www.dmm.co.jp/digital/anime/-/detail/=/cid=",
+        "https://www.dmm.co.jp/mono/anime/-/detail/=/cid=",
+    ]
+    chosen_url = ""
+    htmlcode = ''
+    for url in fanza_urls:
+        chosen_url = url + fanza_search_number
+        htmlcode = get_html(chosen_url)
+        if "404 Not Found" not in htmlcode:
+            break
+    if "404 Not Found" in htmlcode:
+        return json.dumps({"title": "", })
     try:
-        actor = getActor(htmlcode)
+        # for some old page, the input number does not match the page
+        # for example, the url will be cid=test012
+        # but the hinban on the page is test00012
+        # so get the hinban first, and then pass it to following functions
+        actor = getActor(htmlcode) if "anime" not in chosen_url else ""
+        number = getNum(htmlcode)
         dic = {
             'title': getTitle(htmlcode).strip(getActor(htmlcode)),
             'studio': getStudio(htmlcode),
             'publisher': getPublisher(htmlcode),
             'outline': getOutline(htmlcode),
             'runtime': getRuntime(htmlcode),
-            'director': getDirector(htmlcode),
+            'director': getDirector(htmlcode) if "anime" not in chosen_url else "",
             'actor': actor,
             'release': getRelease(htmlcode),
-            'number': getNum(htmlcode),
+            'number':number,
             'cover': getCover(htmlcode, number),
             'imagecut': 1,
             'tag': getTag(htmlcode),
             'series': getSeries(htmlcode),
             'year': getYear(getRelease(htmlcode)),  # str(re.search('\d{4}',getRelease(a)).group()),
             'actor_photo': getActorPhoto(actor),
-            'website': url,
+            "website": chosen_url,
             'source': 'fanza.py',
         }
     except:

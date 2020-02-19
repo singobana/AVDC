@@ -11,6 +11,8 @@ import javbus
 import javdb
 import fanza
 import javlibrary
+import mgstage
+
 
 # =====================本地文件处理===========================
 
@@ -63,6 +65,9 @@ def getDataFromJSON(file_number, config, mode):  # 从JSON返回元数据
                 json_data = json.loads(javdb.main(file_number))
             if getDataState(json_data) == 0:
                 json_data = json.loads(avsox.main(file_number))
+            if getDataState(json_data) == 0:
+                json_data = json.loads(mgstage.main(file_number))
+
     elif mode != 6 and re.match('\D{2,}00\d{3,}', file_number):
         json_data = {
             'title': '',

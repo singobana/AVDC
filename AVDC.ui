@@ -6,1611 +6,1656 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1025</width>
-    <height>720</height>
+    <width>1250</width>
+    <height>870</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>AVDC-3.7</string>
+   <string>AVDC-3.73</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QStackedWidget" name="stackedWidget">
-    <property name="geometry">
-     <rect>
-      <x>230</x>
-      <y>0</y>
-      <width>821</width>
-      <height>721</height>
-     </rect>
-    </property>
-    <property name="currentIndex">
-     <number>1</number>
-    </property>
-    <widget class="QWidget" name="page_avdc">
-     <widget class="QPushButton" name="pushButton_start_cap">
-      <property name="geometry">
-       <rect>
-        <x>650</x>
-        <y>10</y>
-        <width>121</width>
-        <height>41</height>
-       </rect>
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <item>
+     <widget class="QWidget" name="widget_setting" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
       </property>
-      <property name="text">
-       <string>开始</string>
+      <property name="minimumSize">
+       <size>
+        <width>221</width>
+        <height>721</height>
+       </size>
       </property>
+      <widget class="QLabel" name="label_ico">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>380</y>
+         <width>201</width>
+         <height>321</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>图标</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>201</width>
+         <height>360</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QPushButton" name="pushButton_close">
+            <property name="text">
+             <string>X</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_min">
+            <property name="text">
+             <string>-</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_main">
+          <property name="text">
+           <string>主界面</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_log">
+          <property name="text">
+           <string>日志</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_tool">
+          <property name="text">
+           <string>工具</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_setting">
+          <property name="text">
+           <string>设置</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_about">
+          <property name="text">
+           <string>关于</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser_warning">
-      <property name="geometry">
-       <rect>
-        <x>100</x>
-        <y>10</y>
-        <width>471</width>
-        <height>41</height>
-       </rect>
+    </item>
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="minimumSize">
+       <size>
+        <width>1013</width>
+        <height>860</height>
+       </size>
       </property>
-      <property name="html">
-       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page_avdc">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QTreeWidget" name="treeWidget_number">
+          <column>
+           <property name="text">
+            <string>番号</string>
+           </property>
+          </column>
+          <item>
+           <property name="text">
+            <string>成功</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>失败</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="main_right" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>600</width>
+            <height>0</height>
+           </size>
+          </property>
+          <widget class="QPushButton" name="pushButton_start_cap">
+           <property name="geometry">
+            <rect>
+             <x>380</x>
+             <y>0</y>
+             <width>191</width>
+             <height>50</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>开始</string>
+           </property>
+          </widget>
+          <widget class="QTextBrowser" name="textBrowser_warning">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>370</width>
+             <height>50</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>宋体</family>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="html">
+            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#000000;&quot;&gt;反馈BUG，请：开调试模式后截图日志。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-     <widget class="QWidget" name="horizontalLayoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>680</y>
-        <width>791</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
-       <item>
-        <widget class="QProgressBar" name="progressBar_avdc">
-         <property name="value">
-          <number>24</number>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_percent">
-         <property name="text">
-          <string>0%</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QTreeWidget" name="treeWidget_number">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>70</y>
-        <width>201</width>
-        <height>601</height>
-       </rect>
-      </property>
-      <column>
-       <property name="text">
-        <string>番号</string>
-       </property>
-      </column>
-      <item>
-       <property name="text">
-        <string>成功</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>失败</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QWidget" name="gridLayoutWidget_2">
-      <property name="geometry">
-       <rect>
-        <x>210</x>
-        <y>450</y>
-        <width>161</width>
-        <height>221</height>
-       </rect>
-      </property>
-      <layout class="QGridLayout" name="gridLayout_2">
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_poster">
-         <property name="frameShape">
-          <enum>QFrame::Box</enum>
-         </property>
-         <property name="text">
-          <string>封面图</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="gridLayoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>450</x>
-        <y>450</y>
-        <width>331</width>
-        <height>221</height>
-       </rect>
-      </property>
-      <layout class="QGridLayout" name="gridLayout">
-       <property name="sizeConstraint">
-        <enum>QLayout::SetDefaultConstraint</enum>
-       </property>
-       <property name="horizontalSpacing">
-        <number>7</number>
-       </property>
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_fanart">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::Box</enum>
-         </property>
-         <property name="text">
-          <string>缩略图</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-         <property name="margin">
-          <number>0</number>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="Line" name="line">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>50</y>
-        <width>791</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_11">
-      <property name="geometry">
-       <rect>
-        <x>210</x>
-        <y>70</y>
-        <width>81</width>
-        <height>39</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>番号：</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_number">
-      <property name="geometry">
-       <rect>
-        <x>290</x>
-        <y>70</y>
-        <width>201</width>
-        <height>39</height>
-       </rect>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Box</enum>
-      </property>
-      <property name="lineWidth">
-       <number>1</number>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_13">
-      <property name="geometry">
-       <rect>
-        <x>500</x>
-        <y>70</y>
-        <width>81</width>
-        <height>39</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>发行日期：</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_release">
-      <property name="geometry">
-       <rect>
-        <x>580</x>
-        <y>70</y>
-        <width>201</width>
-        <height>39</height>
-       </rect>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Box</enum>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_15">
-      <property name="geometry">
-       <rect>
-        <x>210</x>
-        <y>270</y>
-        <width>81</width>
-        <height>39</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>演员：</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_actor">
-      <property name="geometry">
-       <rect>
-        <x>290</x>
-        <y>270</y>
-        <width>491</width>
-        <height>39</height>
-       </rect>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Box</enum>
-      </property>
-      <property name="lineWidth">
-       <number>1</number>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_outline">
-      <property name="geometry">
-       <rect>
-        <x>290</x>
-        <y>320</y>
-        <width>491</width>
-        <height>39</height>
-       </rect>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Box</enum>
-      </property>
-      <property name="lineWidth">
-       <number>1</number>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_18">
-      <property name="geometry">
-       <rect>
-        <x>210</x>
-        <y>320</y>
-        <width>81</width>
-        <height>39</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>简介：</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_title">
-      <property name="geometry">
-       <rect>
-        <x>290</x>
-        <y>220</y>
-        <width>491</width>
-        <height>39</height>
-       </rect>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Box</enum>
-      </property>
-      <property name="lineWidth">
-       <number>1</number>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_20">
-      <property name="geometry">
-       <rect>
-        <x>210</x>
-        <y>220</y>
-        <width>81</width>
-        <height>39</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>标题：</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_director">
-      <property name="geometry">
-       <rect>
-        <x>290</x>
-        <y>120</y>
-        <width>201</width>
-        <height>39</height>
-       </rect>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Box</enum>
-      </property>
-      <property name="lineWidth">
-       <number>1</number>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_publish">
-      <property name="geometry">
-       <rect>
-        <x>580</x>
-        <y>170</y>
-        <width>201</width>
-        <height>39</height>
-       </rect>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Box</enum>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_23">
-      <property name="geometry">
-       <rect>
-        <x>210</x>
-        <y>120</y>
-        <width>81</width>
-        <height>39</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>导演：</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_24">
-      <property name="geometry">
-       <rect>
-        <x>500</x>
-        <y>170</y>
-        <width>81</width>
-        <height>39</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>发行：</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_studio">
-      <property name="geometry">
-       <rect>
-        <x>290</x>
-        <y>170</y>
-        <width>201</width>
-        <height>39</height>
-       </rect>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Box</enum>
-      </property>
-      <property name="lineWidth">
-       <number>1</number>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_label">
-      <property name="geometry">
-       <rect>
-        <x>580</x>
-        <y>120</y>
-        <width>201</width>
-        <height>39</height>
-       </rect>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Box</enum>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_30">
-      <property name="geometry">
-       <rect>
-        <x>210</x>
-        <y>170</y>
-        <width>81</width>
-        <height>39</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>制作：</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_31">
-      <property name="geometry">
-       <rect>
-        <x>500</x>
-        <y>120</y>
-        <width>81</width>
-        <height>39</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>系列：</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_tag">
-      <property name="geometry">
-       <rect>
-        <x>290</x>
-        <y>370</y>
-        <width>491</width>
-        <height>39</height>
-       </rect>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Box</enum>
-      </property>
-      <property name="lineWidth">
-       <number>1</number>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_33">
-      <property name="geometry">
-       <rect>
-        <x>210</x>
-        <y>370</y>
-        <width>81</width>
-        <height>39</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>类别：</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_cover">
-      <property name="geometry">
-       <rect>
-        <x>210</x>
-        <y>420</y>
-        <width>321</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>显示封面(取消勾选后，立即关闭封面显示)</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_progress">
-      <property name="geometry">
-       <rect>
-        <x>690</x>
-        <y>420</y>
-        <width>91</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>0/0</string>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="page_tool">
-     <widget class="QGroupBox" name="groupBox_6">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>751</width>
-        <height>121</height>
-       </rect>
-      </property>
-      <property name="title">
-       <string>视频、字幕移动</string>
-      </property>
-      <widget class="QLabel" name="label_8">
-       <property name="geometry">
-        <rect>
-         <x>230</x>
-         <y>60</y>
-         <width>511</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>程序所在目录的所有子目录(不包括排除目录)下的视频及同名字幕，
-移动到当前目录下。</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="pushButton_move_mp4">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>30</y>
-         <width>201</width>
-         <height>71</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>开始移动</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_41">
-       <property name="geometry">
-        <rect>
-         <x>230</x>
-         <y>30</y>
-         <width>81</width>
-         <height>24</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>排除目录：</string>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="lineEdit_escape_dir_move">
-       <property name="geometry">
-        <rect>
-         <x>310</x>
-         <y>30</y>
-         <width>431</width>
-         <height>24</height>
-        </rect>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_7">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>140</y>
-        <width>751</width>
-        <height>111</height>
-       </rect>
-      </property>
-      <property name="title">
-       <string>单文件刮削</string>
-      </property>
-      <widget class="QLabel" name="label">
-       <property name="geometry">
-        <rect>
-         <x>230</x>
-         <y>60</y>
-         <width>511</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>选择单个文件(程序目录下或者子目录下)，使用文件名做为番号进行刮削。</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="pushButton_select_file">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>30</y>
-         <width>201</width>
-         <height>71</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>选择文件</string>
-       </property>
-      </widget>
-      <widget class="QComboBox" name="comboBox_website">
-       <property name="geometry">
-        <rect>
-         <x>310</x>
-         <y>30</y>
-         <width>431</width>
-         <height>22</height>
-        </rect>
-       </property>
-       <item>
-        <property name="text">
-         <string>All websites</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>javdb</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>javbus</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>avsox</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>fc2club</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>fanza</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>siro(mgstage)</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>javlibrary</string>
-        </property>
-       </item>
-      </widget>
-      <widget class="QLabel" name="label_2">
-       <property name="geometry">
-        <rect>
-         <x>230</x>
-         <y>30</y>
-         <width>72</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>刮削网站:</string>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_12">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>270</y>
-        <width>751</width>
-        <height>191</height>
-       </rect>
-      </property>
-      <property name="title">
-       <string>Emby-女优头像</string>
-      </property>
-      <widget class="QPushButton" name="pushButton_add_actor_pic">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>30</y>
-         <width>201</width>
-         <height>71</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>添加头像</string>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="lineEdit_emby_url">
-       <property name="geometry">
-        <rect>
-         <x>310</x>
-         <y>30</y>
-         <width>431</width>
-         <height>21</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_3">
-       <property name="geometry">
-        <rect>
-         <x>230</x>
-         <y>30</y>
-         <width>72</width>
-         <height>15</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Emby地址：</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_4">
-       <property name="geometry">
-        <rect>
-         <x>230</x>
-         <y>74</y>
-         <width>72</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>API密钥：</string>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="lineEdit_api_key">
-       <property name="geometry">
-        <rect>
-         <x>310</x>
-         <y>70</y>
-         <width>431</width>
-         <height>21</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_5">
-       <property name="geometry">
-        <rect>
-         <x>230</x>
-         <y>110</y>
-         <width>511</width>
-         <height>71</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>说明:
-   1、头像请放在程序目录(AVDC目录)下的Actor目录中。
-   2、密钥创建方法：Emby控制台-&gt;高级-&gt;API密钥-&gt;添加(APP名称任意)。</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="pushButton_show_pic_actor">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>140</y>
-         <width>201</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>查看</string>
-       </property>
-      </widget>
-      <widget class="QComboBox" name="comboBox_pic_actor">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>110</y>
-         <width>201</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <item>
-        <property name="text">
-         <string>可添加头像的女优</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>没有头像的女优</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>已有头像的女优</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>所有女优</string>
-        </property>
-       </item>
-      </widget>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_13">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>470</y>
-        <width>751</width>
-        <height>111</height>
-       </rect>
-      </property>
-      <property name="title">
-       <string>裁剪封面图</string>
-      </property>
-      <widget class="QPushButton" name="pushButton_select_fanart">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>20</y>
-         <width>201</width>
-         <height>71</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>选择缩略图</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_6">
-       <property name="geometry">
-        <rect>
-         <x>230</x>
-         <y>20</y>
-         <width>511</width>
-         <height>71</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>说明:
-  1、对有些封面图(.png)不满意,比例不对或者分辨率太低,可使用此工具。
-  2、此工具通过判断人脸位置，可以将缩略图(.jpg)裁剪为封面图。
-  3、不要选择Backdrop.jpg。</string>
-       </property>
-      </widget>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="page_setting">
-     <widget class="QPushButton" name="pushButton_save_config">
-      <property name="geometry">
-       <rect>
-        <x>210</x>
-        <y>660</y>
-        <width>361</width>
-        <height>28</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>保存</string>
-      </property>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_8">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>530</y>
-        <width>761</width>
-        <height>121</height>
-       </rect>
-      </property>
-      <property name="title">
-       <string>命名规则</string>
-      </property>
-      <widget class="QWidget" name="formLayoutWidget_4">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>20</y>
-         <width>751</width>
-         <height>110</height>
-        </rect>
-       </property>
-       <layout class="QFormLayout" name="formLayout_6">
-        <item row="0" column="0">
-         <widget class="QLabel" name="label_43">
-          <property name="text">
-           <string>   目录命名：             </string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QLineEdit" name="lineEdit_dir_name"/>
-        </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="label_44">
-          <property name="text">
-           <string>   视频标题(媒体库中)：   </string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QLineEdit" name="lineEdit_media_name"/>
-        </item>
-        <item row="2" column="0">
-         <widget class="QLabel" name="label_45">
-          <property name="text">
-           <string>   视频标题(本地文件)：   </string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="QLineEdit" name="lineEdit_local_name"/>
-        </item>
-       </layout>
-      </widget>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_9">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>400</y>
-        <width>751</width>
-        <height>121</height>
-       </rect>
-      </property>
-      <property name="title">
-       <string>代理设置</string>
-      </property>
-      <widget class="QWidget" name="formLayoutWidget_2">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>20</y>
-         <width>751</width>
-         <height>91</height>
-        </rect>
-       </property>
-       <layout class="QFormLayout" name="formLayout_4">
-        <item row="0" column="0">
-         <widget class="QLabel" name="label_25">
-          <property name="text">
-           <string>   代理:                 </string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QLineEdit" name="lineEdit_proxy"/>
-        </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="label_26">
-          <property name="text">
-           <string>   超时重试时间：         </string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QLineEdit" name="lineEdit_timeout"/>
-        </item>
-        <item row="2" column="0">
-         <widget class="QLabel" name="label_27">
-          <property name="text">
-           <string>   重试次数：             </string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="QLineEdit" name="lineEdit_retry"/>
-        </item>
-       </layout>
-      </widget>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_10">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>751</width>
-        <height>381</height>
-       </rect>
-      </property>
-      <property name="title">
-       <string>普通设置</string>
-      </property>
-      <widget class="QWidget" name="formLayoutWidget_3">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>250</y>
-         <width>751</width>
-         <height>121</height>
-        </rect>
-       </property>
-       <layout class="QFormLayout" name="formLayout">
-        <item row="0" column="0">
-         <widget class="QLabel" name="label_37">
-          <property name="text">
-           <string>   失败输出目录：         </string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QLineEdit" name="lineEdit_fail"/>
-        </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="label_39">
-          <property name="frameShape">
-           <enum>QFrame::NoFrame</enum>
-          </property>
-          <property name="text">
-           <string>   成功输出目录：         </string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QLineEdit" name="lineEdit_success"/>
-        </item>
-        <item row="2" column="0">
-         <widget class="QLabel" name="label_40">
-          <property name="text">
-           <string>   排除目录：</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="QLineEdit" name="lineEdit_escape_dir"/>
-        </item>
-        <item row="3" column="0">
-         <widget class="QLabel" name="label_38">
-          <property name="text">
-           <string>   异常字符：             </string>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="1">
-         <widget class="QLineEdit" name="lineEdit_escape_char"/>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="verticalLayoutWidget_2">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>20</y>
-         <width>731</width>
-         <height>221</height>
-        </rect>
-       </property>
-       <layout class="QVBoxLayout" name="verticalLayout_3">
-        <item>
-         <widget class="QGroupBox" name="groupBox">
-          <property name="title">
-           <string>模式：</string>
-          </property>
-          <widget class="QRadioButton" name="radioButton_common">
-           <property name="geometry">
-            <rect>
-             <x>190</x>
-             <y>10</y>
-             <width>181</width>
-             <height>19</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>普通模式</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'宋体'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun'; font-size:10.5pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun'; font-size:12pt; font-weight:600; color:#000000;&quot;&gt;反馈BUG，请：开调试模式后截图日志。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
           </widget>
-          <widget class="QRadioButton" name="radioButton_sort">
+          <widget class="QWidget" name="horizontalLayoutWidget">
            <property name="geometry">
             <rect>
-             <x>490</x>
-             <y>10</y>
-             <width>181</width>
-             <height>19</height>
+             <x>0</x>
+             <y>800</y>
+             <width>571</width>
+             <height>41</height>
             </rect>
            </property>
-           <property name="text">
-            <string>整理模式</string>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QProgressBar" name="progressBar_avdc">
+              <property name="value">
+               <number>24</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_percent">
+              <property name="text">
+               <string>0%</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="gridLayoutWidget_2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>560</y>
+             <width>161</width>
+             <height>221</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_2">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_poster">
+              <property name="frameShape">
+               <enum>QFrame::Box</enum>
+              </property>
+              <property name="text">
+               <string>封面图</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="gridLayoutWidget">
+           <property name="geometry">
+            <rect>
+             <x>240</x>
+             <y>560</y>
+             <width>331</width>
+             <height>221</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetDefaultConstraint</enum>
+            </property>
+            <property name="horizontalSpacing">
+             <number>7</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_fanart">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::Box</enum>
+              </property>
+              <property name="text">
+               <string>缩略图</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="margin">
+               <number>0</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="Line" name="line">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>50</y>
+             <width>571</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
            </property>
           </widget>
-         </widget>
-        </item>
-        <item>
-         <widget class="QGroupBox" name="groupBox_2">
-          <property name="title">
-           <string>软链接模式：</string>
-          </property>
-          <widget class="QRadioButton" name="radioButton_soft_on">
+          <widget class="QLabel" name="label_11">
            <property name="geometry">
             <rect>
-             <x>190</x>
-             <y>10</y>
-             <width>181</width>
-             <height>19</height>
+             <x>0</x>
+             <y>70</y>
+             <width>81</width>
+             <height>39</height>
             </rect>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
            <property name="text">
-            <string>开</string>
+            <string>番号：</string>
            </property>
           </widget>
-          <widget class="QRadioButton" name="radioButton_soft_off">
+          <widget class="QLabel" name="label_number">
            <property name="geometry">
             <rect>
-             <x>490</x>
-             <y>10</y>
-             <width>181</width>
-             <height>19</height>
+             <x>80</x>
+             <y>70</y>
+             <width>201</width>
+             <height>39</height>
             </rect>
            </property>
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+           <property name="lineWidth">
+            <number>1</number>
+           </property>
            <property name="text">
-            <string>关</string>
+            <string/>
            </property>
           </widget>
-         </widget>
-        </item>
-        <item>
-         <widget class="QGroupBox" name="groupBox_3">
-          <property name="title">
-           <string>调试模式：</string>
-          </property>
-          <widget class="QRadioButton" name="radioButton_debug_on">
+          <widget class="QLabel" name="label_13">
            <property name="geometry">
             <rect>
-             <x>190</x>
-             <y>10</y>
-             <width>181</width>
-             <height>19</height>
+             <x>290</x>
+             <y>70</y>
+             <width>81</width>
+             <height>39</height>
             </rect>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
            <property name="text">
-            <string>开</string>
+            <string>发行日期：</string>
            </property>
           </widget>
-          <widget class="QRadioButton" name="radioButton_debug_off">
+          <widget class="QLabel" name="label_release">
            <property name="geometry">
             <rect>
-             <x>490</x>
-             <y>10</y>
-             <width>181</width>
-             <height>19</height>
+             <x>370</x>
+             <y>70</y>
+             <width>201</width>
+             <height>39</height>
             </rect>
            </property>
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
            <property name="text">
-            <string>关</string>
+            <string/>
            </property>
           </widget>
-         </widget>
-        </item>
-        <item>
-         <widget class="QGroupBox" name="groupBox_4">
-          <property name="title">
-           <string>检测更新：</string>
-          </property>
-          <widget class="QRadioButton" name="radioButton_update_on">
+          <widget class="QLabel" name="label_15">
            <property name="geometry">
             <rect>
-             <x>190</x>
-             <y>10</y>
-             <width>181</width>
-             <height>19</height>
+             <x>0</x>
+             <y>270</y>
+             <width>81</width>
+             <height>39</height>
             </rect>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
            <property name="text">
-            <string>开</string>
+            <string>演员：</string>
            </property>
           </widget>
-          <widget class="QRadioButton" name="radioButton_update_off">
+          <widget class="QLabel" name="label_actor">
            <property name="geometry">
             <rect>
-             <x>490</x>
-             <y>10</y>
-             <width>181</width>
-             <height>19</height>
+             <x>80</x>
+             <y>270</y>
+             <width>491</width>
+             <height>39</height>
             </rect>
            </property>
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+           <property name="lineWidth">
+            <number>1</number>
+           </property>
            <property name="text">
-            <string>关</string>
+            <string/>
            </property>
           </widget>
-         </widget>
-        </item>
-        <item>
-         <widget class="QGroupBox" name="groupBox_5">
-          <property name="title">
-           <string>媒体库：</string>
-          </property>
-          <widget class="QRadioButton" name="radioButton_emby">
+          <widget class="QLabel" name="label_outline">
            <property name="geometry">
             <rect>
-             <x>190</x>
-             <y>10</y>
-             <width>181</width>
-             <height>19</height>
+             <x>80</x>
+             <y>320</y>
+             <width>491</width>
+             <height>39</height>
             </rect>
            </property>
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+           <property name="lineWidth">
+            <number>1</number>
+           </property>
            <property name="text">
-            <string>emby/jellyfin</string>
+            <string/>
            </property>
           </widget>
-          <widget class="QRadioButton" name="radioButton_plex">
+          <widget class="QLabel" name="label_18">
            <property name="geometry">
             <rect>
-             <x>420</x>
-             <y>10</y>
-             <width>181</width>
-             <height>19</height>
+             <x>0</x>
+             <y>320</y>
+             <width>81</width>
+             <height>39</height>
             </rect>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
            <property name="text">
-            <string>plex</string>
+            <string>简介：</string>
            </property>
           </widget>
-          <widget class="QRadioButton" name="radioButton_kodi">
+          <widget class="QLabel" name="label_title">
            <property name="geometry">
             <rect>
-             <x>600</x>
-             <y>10</y>
-             <width>115</width>
-             <height>19</height>
+             <x>80</x>
+             <y>220</y>
+             <width>491</width>
+             <height>39</height>
             </rect>
            </property>
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+           <property name="lineWidth">
+            <number>1</number>
+           </property>
            <property name="text">
-            <string>kodi</string>
+            <string/>
            </property>
           </widget>
-         </widget>
-        </item>
-        <item>
-         <widget class="QGroupBox" name="groupBox_11">
-          <property name="title">
-           <string>网站选择：</string>
-          </property>
-          <widget class="QRadioButton" name="radioButton_all">
+          <widget class="QLabel" name="label_20">
            <property name="geometry">
             <rect>
-             <x>190</x>
-             <y>10</y>
-             <width>291</width>
-             <height>19</height>
+             <x>0</x>
+             <y>220</y>
+             <width>81</width>
+             <height>39</height>
             </rect>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
            <property name="text">
-            <string>All websites</string>
+            <string>标题：</string>
            </property>
           </widget>
-          <widget class="QRadioButton" name="radioButton_javdb">
+          <widget class="QLabel" name="label_director">
            <property name="geometry">
             <rect>
-             <x>490</x>
-             <y>10</y>
-             <width>115</width>
-             <height>19</height>
+             <x>80</x>
+             <y>120</y>
+             <width>201</width>
+             <height>39</height>
             </rect>
            </property>
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+           <property name="lineWidth">
+            <number>1</number>
+           </property>
            <property name="text">
-            <string>Only javdb</string>
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_publish">
+           <property name="geometry">
+            <rect>
+             <x>370</x>
+             <y>170</y>
+             <width>201</width>
+             <height>39</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_23">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>120</y>
+             <width>81</width>
+             <height>39</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>导演：</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_24">
+           <property name="geometry">
+            <rect>
+             <x>290</x>
+             <y>170</y>
+             <width>81</width>
+             <height>39</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>发行：</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_studio">
+           <property name="geometry">
+            <rect>
+             <x>80</x>
+             <y>170</y>
+             <width>201</width>
+             <height>39</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+           <property name="lineWidth">
+            <number>1</number>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_label">
+           <property name="geometry">
+            <rect>
+             <x>370</x>
+             <y>120</y>
+             <width>201</width>
+             <height>39</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_30">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>170</y>
+             <width>81</width>
+             <height>39</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>制作：</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_31">
+           <property name="geometry">
+            <rect>
+             <x>290</x>
+             <y>120</y>
+             <width>81</width>
+             <height>39</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>系列：</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_tag">
+           <property name="geometry">
+            <rect>
+             <x>80</x>
+             <y>370</y>
+             <width>491</width>
+             <height>39</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+           <property name="lineWidth">
+            <number>1</number>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_33">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>370</y>
+             <width>81</width>
+             <height>39</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>类别：</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="checkBox_cover">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>520</y>
+             <width>321</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>显示封面(取消勾选后，立即关闭封面显示)</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_progress">
+           <property name="geometry">
+            <rect>
+             <x>480</x>
+             <y>520</y>
+             <width>91</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0/0</string>
            </property>
           </widget>
          </widget>
         </item>
        </layout>
       </widget>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="page_about">
-     <widget class="QTextBrowser" name="textBrowser_about">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>20</y>
-        <width>761</width>
-        <height>681</height>
-       </rect>
-      </property>
-      <property name="html">
-       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+      <widget class="QWidget" name="page_tool">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QGroupBox" name="groupBox_6">
+          <property name="title">
+           <string>视频、字幕移动</string>
+          </property>
+          <widget class="QLabel" name="label_8">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>60</y>
+             <width>511</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>程序所在目录的所有子目录(不包括排除目录)下的视频及同名字幕， 移动到当前目录下。</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_move_mp4">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>30</y>
+             <width>201</width>
+             <height>71</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>开始移动</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_41">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>30</y>
+             <width>81</width>
+             <height>24</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>排除目录：</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="lineEdit_escape_dir_move">
+           <property name="geometry">
+            <rect>
+             <x>310</x>
+             <y>30</y>
+             <width>431</width>
+             <height>24</height>
+            </rect>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_7">
+          <property name="title">
+           <string>单文件刮削</string>
+          </property>
+          <widget class="QLabel" name="label">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>60</y>
+             <width>511</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>选择单个文件(程序目录下或者子目录下)，使用文件名做为番号进行刮削。</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_select_file">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>30</y>
+             <width>201</width>
+             <height>71</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>选择文件</string>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="comboBox_website">
+           <property name="geometry">
+            <rect>
+             <x>310</x>
+             <y>30</y>
+             <width>431</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <item>
+            <property name="text">
+             <string>All websites</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>javdb</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>javbus</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>avsox</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>fc2club</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>fanza</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>siro(mgstage)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>javlibrary</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QLabel" name="label_2">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>30</y>
+             <width>72</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>刮削网站:</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_12">
+          <property name="title">
+           <string>Emby-女优头像</string>
+          </property>
+          <widget class="QPushButton" name="pushButton_add_actor_pic">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>30</y>
+             <width>201</width>
+             <height>71</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>添加头像</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="lineEdit_emby_url">
+           <property name="geometry">
+            <rect>
+             <x>310</x>
+             <y>30</y>
+             <width>431</width>
+             <height>21</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_3">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>30</y>
+             <width>72</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Emby地址：</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_4">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>74</y>
+             <width>72</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>API密钥：</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="lineEdit_api_key">
+           <property name="geometry">
+            <rect>
+             <x>310</x>
+             <y>70</y>
+             <width>431</width>
+             <height>21</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_5">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>110</y>
+             <width>511</width>
+             <height>71</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>说明: 1、头像请放在程序目录(AVDC目录)下的Actor目录中。 2、密钥创建方法：Emby控制台-&gt;高级-&gt;API密钥-&gt;添加(APP名称任意)。</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_show_pic_actor">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>140</y>
+             <width>201</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>查看</string>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="comboBox_pic_actor">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>110</y>
+             <width>201</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <item>
+            <property name="text">
+             <string>可添加头像的女优</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>没有头像的女优</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>已有头像的女优</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>所有女优</string>
+            </property>
+           </item>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_13">
+          <property name="title">
+           <string>裁剪封面图</string>
+          </property>
+          <widget class="QPushButton" name="pushButton_select_fanart">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>20</y>
+             <width>201</width>
+             <height>71</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>选择缩略图</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_6">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>20</y>
+             <width>511</width>
+             <height>71</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>说明: 1、对有些封面图(.png)不满意,比例不对或者分辨率太低,可使用此工具。 2、此工具通过判断人脸位置，可以将缩略图(.jpg)裁剪为封面图。 3、不要选择Backdrop.jpg。</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_setting">
+       <widget class="QPushButton" name="pushButton_save_config">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>660</y>
+          <width>361</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>保存</string>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_8">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>530</y>
+          <width>761</width>
+          <height>121</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>命名规则</string>
+        </property>
+        <widget class="QWidget" name="formLayoutWidget_4">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>751</width>
+           <height>110</height>
+          </rect>
+         </property>
+         <layout class="QFormLayout" name="formLayout_6">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_43">
+            <property name="text">
+             <string>目录命名：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="lineEdit_dir_name"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_44">
+            <property name="text">
+             <string>视频标题(媒体库中)：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lineEdit_media_name"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_45">
+            <property name="text">
+             <string>视频标题(本地文件)：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="lineEdit_local_name"/>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_9">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>400</y>
+          <width>751</width>
+          <height>121</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>代理设置</string>
+        </property>
+        <widget class="QWidget" name="formLayoutWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>751</width>
+           <height>91</height>
+          </rect>
+         </property>
+         <layout class="QFormLayout" name="formLayout_4">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_25">
+            <property name="text">
+             <string>代理:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="lineEdit_proxy"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_26">
+            <property name="text">
+             <string>超时重试时间：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lineEdit_timeout"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_27">
+            <property name="text">
+             <string>重试次数：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="lineEdit_retry"/>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_10">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>751</width>
+          <height>381</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>普通设置</string>
+        </property>
+        <widget class="QWidget" name="formLayoutWidget_3">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>250</y>
+           <width>751</width>
+           <height>121</height>
+          </rect>
+         </property>
+         <layout class="QFormLayout" name="formLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_37">
+            <property name="text">
+             <string>失败输出目录：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="lineEdit_fail"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_39">
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="text">
+             <string>成功输出目录：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lineEdit_success"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_40">
+            <property name="text">
+             <string>排除目录：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="lineEdit_escape_dir"/>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_38">
+            <property name="text">
+             <string>异常字符：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="lineEdit_escape_char"/>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="verticalLayoutWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>731</width>
+           <height>221</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QGroupBox" name="groupBox">
+            <property name="title">
+             <string>模式：</string>
+            </property>
+            <widget class="QRadioButton" name="radioButton_common">
+             <property name="geometry">
+              <rect>
+               <x>190</x>
+               <y>10</y>
+               <width>181</width>
+               <height>19</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>普通模式</string>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="radioButton_sort">
+             <property name="geometry">
+              <rect>
+               <x>490</x>
+               <y>10</y>
+               <width>181</width>
+               <height>19</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>整理模式</string>
+             </property>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_2">
+            <property name="title">
+             <string>软链接模式：</string>
+            </property>
+            <widget class="QRadioButton" name="radioButton_soft_on">
+             <property name="geometry">
+              <rect>
+               <x>190</x>
+               <y>10</y>
+               <width>181</width>
+               <height>19</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>开</string>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="radioButton_soft_off">
+             <property name="geometry">
+              <rect>
+               <x>490</x>
+               <y>10</y>
+               <width>181</width>
+               <height>19</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>关</string>
+             </property>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_3">
+            <property name="title">
+             <string>调试模式：</string>
+            </property>
+            <widget class="QRadioButton" name="radioButton_debug_on">
+             <property name="geometry">
+              <rect>
+               <x>190</x>
+               <y>10</y>
+               <width>181</width>
+               <height>19</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>开</string>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="radioButton_debug_off">
+             <property name="geometry">
+              <rect>
+               <x>490</x>
+               <y>10</y>
+               <width>181</width>
+               <height>19</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>关</string>
+             </property>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_4">
+            <property name="title">
+             <string>检测更新：</string>
+            </property>
+            <widget class="QRadioButton" name="radioButton_update_on">
+             <property name="geometry">
+              <rect>
+               <x>190</x>
+               <y>10</y>
+               <width>181</width>
+               <height>19</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>开</string>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="radioButton_update_off">
+             <property name="geometry">
+              <rect>
+               <x>490</x>
+               <y>10</y>
+               <width>181</width>
+               <height>19</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>关</string>
+             </property>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_5">
+            <property name="title">
+             <string>媒体库：</string>
+            </property>
+            <widget class="QRadioButton" name="radioButton_emby">
+             <property name="geometry">
+              <rect>
+               <x>190</x>
+               <y>10</y>
+               <width>181</width>
+               <height>19</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>emby/jellyfin</string>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="radioButton_plex">
+             <property name="geometry">
+              <rect>
+               <x>420</x>
+               <y>10</y>
+               <width>181</width>
+               <height>19</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>plex</string>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="radioButton_kodi">
+             <property name="geometry">
+              <rect>
+               <x>600</x>
+               <y>10</y>
+               <width>115</width>
+               <height>19</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>kodi</string>
+             </property>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_11">
+            <property name="title">
+             <string>网站选择：</string>
+            </property>
+            <widget class="QRadioButton" name="radioButton_all">
+             <property name="geometry">
+              <rect>
+               <x>190</x>
+               <y>10</y>
+               <width>291</width>
+               <height>19</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>All websites</string>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="radioButton_javdb">
+             <property name="geometry">
+              <rect>
+               <x>490</x>
+               <y>10</y>
+               <width>115</width>
+               <height>19</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>Only javdb</string>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_about">
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QTextBrowser" name="textBrowser_about">
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:10.5pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun';&quot;&gt; &lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:20pt; font-weight:600;&quot;&gt;AVDC&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:14pt; font-weight:600;&quot;&gt;目录&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;#_一、功能简介&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;&quot;&gt;  一、功能简介&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;#_二、项目简介&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;&quot;&gt;  二、项目简介&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;#_设置说明&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;&quot;&gt;  三、设置说明&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;#_四、更新日志&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;&quot;&gt;  四、更新日志&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:10.5pt; font-weight:600;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;#_一、功能简介&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;&quot;&gt; 一、功能简介&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;#_二、项目简介&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;&quot;&gt; 二、项目简介&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;#_设置说明&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;&quot;&gt; 三、设置说明&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;#_四、更新日志&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;&quot;&gt; 四、更新日志&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-weight:600;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
 &lt;h1 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;_一、功能简介&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'宋体'; font-size:22pt; font-weight:600;&quot;&gt;一&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:22pt; font-weight:600;&quot;&gt;、功能简介&lt;/span&gt;&lt;/h1&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  日本电影&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;元数据抓取工具&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;/刮削器，配合本地影片管理软件&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;EMBY,KODI，PLEX&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;等管理本地影片，该软件起到分类与元数据抓取作用，利用元数据信息来分类，供本地影片&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;分类整理&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;使用。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 日本电影&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;元数据抓取工具&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;/刮削器，配合本地影片管理软件&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;EMBY,KODI，PLEX&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;等管理本地影片，该软件起到分类与元数据抓取作用，利用元数据信息来分类，供本地影片&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;分类整理&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;使用。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
 &lt;h1 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;_二、项目简介&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'宋体'; font-size:22pt; font-weight:600;&quot;&gt;二&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:22pt; font-weight:600;&quot;&gt;、项目简介&lt;/span&gt;&lt;/h1&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt;&quot;&gt;  G&lt;/span&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt;&quot;&gt;ui made by &lt;/span&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt; font-weight:600; color:#ff0000;&quot;&gt;moy&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; color:#ff0000;&quot;&gt;y&lt;/span&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt; font-weight:600; color:#ff0000;&quot;&gt;996&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt;&quot;&gt;，C&lt;/span&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt;&quot;&gt;ore made by &lt;/span&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt; font-weight:600; color:#ff0000;&quot;&gt;yoshiko2&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt;&quot;&gt;    tg&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt;&quot;&gt;官方电报群&lt;/span&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt;&quot;&gt;:&lt;/span&gt;&lt;a href=&quot;https://t.me/joinchat/J54y1g3-a7nxJ_-WS4-KFQ&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt; text-decoration: underline; color:#0000ff;&quot;&gt; &lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;https://t.me/joinchat/J54y1g3-a7nxJ_-WS4-KFQ&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;&quot;&gt;https://t.me/joinchat/J54y1g3-a7nxJ_-WS4-KFQ&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt;&quot;&gt;  命令行版项目地址：&lt;/span&gt;&lt;a href=&quot;https://github.com/yoshiko2/AV_Data_Capture&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;&quot;&gt;https://github.com/yoshiko2/AV_Data_Capture&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt;&quot;&gt;  GUI版项目地址：&lt;/span&gt;&lt;a href=&quot;https://github.com/moyy996/AVDC&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;&quot;&gt;https://github.com/moyy996/AVDC&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt;&quot;&gt;  GUI版&lt;/span&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt;&quot;&gt;EXE&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt;&quot;&gt;下载地址：&lt;/span&gt;&lt;a href=&quot;https://github.com/moyy996/AVDC/releases&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;&quot;&gt;https://github.com/moyy996/AVDC/releases&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt;&quot;&gt; G&lt;/span&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt;&quot;&gt;ui made by &lt;/span&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt; font-weight:600; color:#ff0000;&quot;&gt;moy&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; color:#ff0000;&quot;&gt;y&lt;/span&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt; font-weight:600; color:#ff0000;&quot;&gt;996&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt;&quot;&gt;，C&lt;/span&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt;&quot;&gt;ore made by &lt;/span&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt; font-weight:600; color:#ff0000;&quot;&gt;yoshiko2&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt;&quot;&gt; tg&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt;&quot;&gt;官方电报群&lt;/span&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt;&quot;&gt;:&lt;/span&gt;&lt;a href=&quot;https://t.me/joinchat/J54y1g3-a7nxJ_-WS4-KFQ&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt; text-decoration: underline; color:#0000ff;&quot;&gt; &lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;https://t.me/joinchat/J54y1g3-a7nxJ_-WS4-KFQ&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;&quot;&gt;https://t.me/joinchat/J54y1g3-a7nxJ_-WS4-KFQ&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt;&quot;&gt; 命令行版项目地址：&lt;/span&gt;&lt;a href=&quot;https://github.com/yoshiko2/AV_Data_Capture&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;&quot;&gt;https://github.com/yoshiko2/AV_Data_Capture&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt;&quot;&gt; GUI版项目地址：&lt;/span&gt;&lt;a href=&quot;https://github.com/moyy996/AVDC&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;&quot;&gt;https://github.com/moyy996/AVDC&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt;&quot;&gt; GUI版&lt;/span&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt;&quot;&gt;EXE&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt;&quot;&gt;下载地址：&lt;/span&gt;&lt;a href=&quot;https://github.com/moyy996/AVDC/releases&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;&quot;&gt;https://github.com/moyy996/AVDC/releases&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
 &lt;h1 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;_设置说明&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'宋体'; font-size:22pt; font-weight:600;&quot;&gt;三&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:22pt; font-weight:600;&quot;&gt;、设置说明&lt;/span&gt;&lt;/h1&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  更详细的说明： &lt;/span&gt;&lt;a href=&quot;https://github.com/moyy996/AVDC/blob/master/README.md&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; text-decoration: underline; color:#24292e; background-color:#ffffff;&quot;&gt;https://github.com/moyy996/AVDC/blob/master/README.md&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; text-decoration: underline; color:#24292e;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 更详细的说明： &lt;/span&gt;&lt;a href=&quot;https://github.com/moyy996/AVDC/blob/master/README.md&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; text-decoration: underline; color:#24292e; background-color:#ffffff;&quot;&gt;https://github.com/moyy996/AVDC/blob/master/README.md&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; text-decoration: underline; color:#24292e;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
 &lt;h4 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;1、普通模式/整理模式&lt;/span&gt;&lt;/h4&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#000000; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;普通模式&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;：通过番号刮削数据，包括元数据、封面图、缩略图、背景图。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#000000; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;整理模式&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;：仅根据女优把电影命名为番号并分类到女优名称的文件夹下&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#000000; background-color:#ffffff;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;普通模式&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;：通过番号刮削数据，包括元数据、封面图、缩略图、背景图。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#000000; background-color:#ffffff;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;整理模式&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;：仅根据女优把电影命名为番号并分类到女优名称的文件夹下&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
 &lt;h4 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;2、软链接模式：使用此模式，要以&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; text-decoration: underline; color:#ff0000;&quot;&gt;管理员身份&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;运行。&lt;/span&gt;&lt;/h4&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  刮削完&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;不移动视频&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;，而是在相应目录创建软链接（类似于快捷方式），&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;方便PT下载完既想刮削又想继续上传的仓鼠党同志&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 刮削完&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;不移动视频&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;，而是在相应目录创建软链接（类似于快捷方式），&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;方便PT下载完既想刮削又想继续上传的仓鼠党同志&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
 &lt;h4 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;3、调试模式&lt;/span&gt;&lt;/h4&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  输出番号的元数据，包括封面，导演，演员，简介等。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 输出番号的元数据，包括封面，导演，演员，简介等。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
 &lt;h4 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;4、排除目录&lt;/span&gt;&lt;/h4&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  在多层目录刮削时排除所填目录。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 在多层目录刮削时排除所填目录。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
 &lt;h4 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;5、异常字符&lt;/span&gt;&lt;/h4&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  在创建文件夹时，删除指定的字符。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 在创建文件夹时，删除指定的字符。&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'宋体'; font-size:9.5pt; color:#24292e;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;6、命名规则&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; background-color:#ffffff;&quot;&gt;  1、&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;目录命名&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;：存放视频数据的目录名，支持&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;多层目录&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;，支持&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;自定义符号&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;，例：[actor]/studio/number-【title】。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; background-color:#ffffff;&quot;&gt;  2、&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;视频标题&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;：nfo中的标题命名。例：&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;number-&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;[&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;title&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;]。可以自定义符号。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;3、&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;可选项为&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;title（片名）、actor（演员）、studio（制作商）、director（导演）、release（发售日）、year（发行年份）、number（番号）、runtime（时长）、&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;series（系列）、publisher（发行商）&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; background-color:#ffffff;&quot;&gt; 1、&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;目录命名&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;：存放视频数据的目录名，支持&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;多层目录&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;，支持&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;自定义符号&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;，例：[actor]/studio/number-【title】。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; background-color:#ffffff;&quot;&gt; 2、&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;视频标题&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;：nfo中的标题命名。例：&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;number-&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;[&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;title&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;]。可以自定义符号。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;3、&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;可选项为&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;title（片名）、actor（演员）、studio（制作商）、director（导演）、release（发售日）、year（发行年份）、number（番号）、runtime（时长）、&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;series（系列）、publisher（发行商）&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
 &lt;h4 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;7、网站选择&lt;/span&gt;&lt;/h4&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  1&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;、&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;All website&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;: &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;使用&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;avsox,javbus,fanza,javdb,fc2club&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;进行刮削。&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;&lt;br /&gt;  2&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;、&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;Only javdb&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;: &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;仅使用&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;javdb&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;进行刮削。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 1&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;、&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;All website&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;: &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;使用&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;avsox,javbus,fanza,javdb,fc2club&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;进行刮削。&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;&lt;br /&gt; 2&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;、&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;Only javdb&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;: &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;仅使用&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;javdb&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;进行刮削。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
 &lt;h1 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:22pt; font-weight:600;&quot;&gt;四、更新日志&lt;/span&gt;&lt;/h1&gt;
 &lt;h1 style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'宋体'; font-size:22pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/h1&gt;
 &lt;h1 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:18pt; font-weight:600; color:#ff0000;&quot;&gt;3.7&lt;/span&gt;&lt;/h1&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:11pt; font-weight:600;&quot;&gt;2020-02-15 19:30更新&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;可选项变更：&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;title（片名）、actor（演员）、studio（制作商）、director（导演）、release（发售日）、year（发行年份）、number（番号）、runtime（时长）、&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;series（系列）、publisher（发行商）&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;修复：&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  1、修改javbus的抓取逻辑，成功率提高。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  2、更新&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;进度条&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;改为刮削完之后。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  3、不再强制替换‘_’为‘-’。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  4、EMBY添加头像时，演员有别名，&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;中文符号&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;导致添加失败。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  5、修复字幕移动，与视频文件同名的&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;字幕&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;，刮削完后会随视频一起移动。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 1、修改javbus的抓取逻辑，成功率提高。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 2、更新&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;进度条&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;改为刮削完之后。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 3、不再强制替换‘_’为‘-’。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 4、EMBY添加头像时，演员有别名，&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;中文符号&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;导致添加失败。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 5、修复字幕移动，与视频文件同名的&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;字幕&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;，刮削完后会随视频一起移动。&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;新增：&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  1、&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;自定义本地文件名&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  2、获取&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;制作商，发行商&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  3、标签加入&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;系列、发行商、制作商&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;(太多标签EMBY只显示一部分)。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  4、小工具-&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;视频移动&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;，会移动与视频文件同名的&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;字幕&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 1、&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;自定义本地文件名&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 2、获取&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;制作商，发行商&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 3、标签加入&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;系列、发行商、制作商&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;(太多标签EMBY只显示一部分)。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 4、小工具-&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;视频移动&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;，会移动与视频文件同名的&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;字幕&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:18pt; font-weight:600; color:#ff0000;&quot;&gt;3.61&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:11pt; font-weight:600;&quot;&gt;2020-02-12-15:40更新&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;修复：&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  1、&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;演员过多&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;导致文件夹创建失败。(只取&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;前三个&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;)&lt;br /&gt;  2、avsox有多个封面图时导致失败。&lt;br /&gt;  3、主页面-&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;封面开关&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;不管用。&lt;br /&gt;  4、&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;制作商、导演&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;抓取错误。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 1、&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;演员过多&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;导致文件夹创建失败。(只取&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;前三个&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;)&lt;br /&gt; 2、avsox有多个封面图时导致失败。&lt;br /&gt; 3、主页面-&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;封面开关&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;不管用。&lt;br /&gt; 4、&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;制作商、导演&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;抓取错误。&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;h1 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:18pt; font-weight:600; color:#ff0000;&quot;&gt;3.6&lt;/span&gt;&lt;/h1&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:11pt; font-weight:600;&quot;&gt;2020-02-11 晚23点更新&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;新增：&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  1、修改&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;主界面UI&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;，显示&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;封面，番号、标题&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;等数据。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  2、刮削完的番号会添加到&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;主界面左侧&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  3、刮削&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;成功&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;的可以&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;点选&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;，查看刮削到的&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;数据、封面&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;等。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  4、&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;失败&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;的可以根据对应&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;序号&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;，去日志页查看具体&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;报错信息&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 1、修改&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;主界面UI&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;，显示&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;封面，番号、标题&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;等数据。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 2、刮削完的番号会添加到&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;主界面左侧&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 3、刮削&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;成功&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;的可以&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;点选&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;，查看刮削到的&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;数据、封面&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;等。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 4、&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;失败&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;的可以根据对应&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;序号&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;，去日志页查看具体&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;报错信息&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;。&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:18pt; font-weight:600; color:#ff0000;&quot;&gt;3.5&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:11pt; font-weight:600;&quot;&gt;2020-02-11 凌晨更新&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;新增：&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  1、小工具-&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;裁剪封面图&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;： 裁剪&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;缩略图&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;为&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;封面图&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;。，针对比例错误，分辨率低的情况。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  2、更改&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;命名规则&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;，支持&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;自定义符号&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;，例如:[actor]/number-【title】-（release）。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 1、小工具-&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;裁剪封面图&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;： 裁剪&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;缩略图&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;为&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;封面图&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;。，针对比例错误，分辨率低的情况。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 2、更改&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;命名规则&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;，支持&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;自定义符号&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;，例如:[actor]/number-【title】-（release）。&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;修复：&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  1、avsox封面存在下载失败情况，修改无码片首先到javbus查找。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  2、封面图下载失败后，将缩略图裁剪为封面图。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  3、Fc2、javdb无码封面图比例不对，会进行裁剪。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 1、avsox封面存在下载失败情况，修改无码片首先到javbus查找。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 2、封面图下载失败后，将缩略图裁剪为封面图。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 3、Fc2、javdb无码封面图比例不对，会进行裁剪。&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:18pt; font-weight:600; color:#ff0000;&quot;&gt;3.41&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:11pt; font-weight:600;&quot;&gt;2020-02-09-15点更新&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;新增:&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  1、小工具-&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;单个&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;抓取的文件名&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;去掉-CD、-C&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;。&lt;br /&gt;  2、tag,genre添加&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;系列&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;。&lt;br /&gt;  3、Actor中上传成功的头像复制到&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;Success&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;目录。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 1、小工具-&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;单个&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;抓取的文件名&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;去掉-CD、-C&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;。&lt;br /&gt; 2、tag,genre添加&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;系列&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;。&lt;br /&gt; 3、Actor中上传成功的头像复制到&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;Success&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;目录。&lt;/span&gt;&lt;/p&gt;
 &lt;h1 style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'宋体'; font-size:22pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/h1&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:18pt; font-weight:600; color:#ff0000;&quot;&gt;3.4&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:11pt; font-weight:600;&quot;&gt;2020-02-07-晚20点 更新&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;新增:&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  1、&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;批量添加&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;emby&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;演员头像&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  2、查看&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;可添加头像&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;的演员，&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;有头像、无头像、所有&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;演员。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 1、&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;批量添加&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;emby&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;演员头像&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 2、查看&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;可添加头像&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;的演员，&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;有头像、无头像、所有&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;演员。&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:18pt; font-weight:600; color:#ff0000;&quot;&gt;3.32&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:11pt; font-weight:600;&quot;&gt;2020-02-06-19:10更新&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;修复:&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  1、无法识别&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;111111-MMMM&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;这种番号。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 1、无法识别&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;111111-MMMM&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;这种番号。&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;新增:&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  1、小工具-&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;单个抓取&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;,支持选择&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;刮削网站&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 1、小工具-&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;单个抓取&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;,支持选择&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;刮削网站&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;。&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:18pt; font-weight:600; color:#ff0000;&quot;&gt;3.31&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:11pt; font-weight:600;&quot;&gt;2020-02-05-21:42更新&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;修复:&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  1、仅JAVDB时，番号跟封面图不匹配的BUG。&lt;br /&gt;  2、优化报错信息的输出。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 1、仅JAVDB时，番号跟封面图不匹配的BUG。&lt;br /&gt; 2、优化报错信息的输出。&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:18pt; font-weight:600; color:#ff0000;&quot;&gt;3.3&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:11pt; font-weight:600;&quot;&gt;2020-02-05 凌晨更新&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;修复:&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  1、分集刮削时文件命名出错。&lt;br /&gt;  2、javdb中演员有多曾用名时出错。&lt;br /&gt;  3、文件的命名都采用网站刮削到的番号命名&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 1、分集刮削时文件命名出错。&lt;br /&gt; 2、javdb中演员有多曾用名时出错。&lt;br /&gt; 3、文件的命名都采用网站刮削到的番号命名&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:18pt; font-weight:600; color:#ff0000;&quot;&gt;3.22&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:11pt; font-weight:600;&quot;&gt;2020-02-04 更新&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:11pt; font-weight:600;&quot;&gt;2020-02-04 更新&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;修复：&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  1、javdb,avsox抓取到但是显示抓取失败。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 1、javdb,avsox抓取到但是显示抓取失败。&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;新增：&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  1、文件夹命名支持&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;多级目录&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;，例：actor/studio/number-release。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 1、文件夹命名支持&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;多级目录&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;，例：actor/studio/number-release。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:18pt; font-weight:600; color:#ff0000;&quot;&gt;3.21&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:11pt; font-weight:600;&quot;&gt;2020-02-03-20:24更新&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;新增：&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  1、&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;刮削网站&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;可选，&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;全部网站&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;(avsox,javbus,fanza,javdb,fc2club)，或者&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;仅JAVDB&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;。&lt;br /&gt;  2、改进javdb刮削逻辑。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 1、&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;刮削网站&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;可选，&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;全部网站&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;(avsox,javbus,fanza,javdb,fc2club)，或者&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;仅JAVDB&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;。&lt;br /&gt; 2、改进javdb刮削逻辑。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:18pt; font-weight:600; color:#ff0000;&quot;&gt;3.2&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:11pt; font-weight:600;&quot;&gt;2020-02-03 更新&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;修复：&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  1、找不到影片信息时依然创建目录、下载空图片的问题。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  2、界面微调。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  3、修复&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;MIDE139&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;抓取不到的情况。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 1、找不到影片信息时依然创建目录、下载空图片的问题。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 2、界面微调。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 3、修复&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;MIDE139&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;抓取不到的情况。&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;新增：&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  1、&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;进度条&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;显示。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  2、一次刮削任务未结束，&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;开始按钮&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;不可用。结束后才可用。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 1、&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;进度条&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;显示。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 2、一次刮削任务未结束，&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;开始按钮&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;不可用。结束后才可用。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:18pt; font-weight:600; color:#ff0000;&quot;&gt;3.1&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:11pt; font-weight:600;&quot;&gt;2020-02-02更新&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;修复：&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  1、修复文件夹自定义命名规则时，使用studio、release等刮削失败的bug。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  2、去掉背景透明。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  3、去掉javdb爬虫工具。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 1、修复文件夹自定义命名规则时，使用studio、release等刮削失败的bug。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 2、去掉背景透明。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 3、去掉javdb爬虫工具。&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;新增： &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  1、工具新增&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;单个文件刮削&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;。针对个别刮削失败的情况，使用文件名做番号。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  2、&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;更改&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;自定义文件夹命名、媒体库标题&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;命名规则&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:10.5pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 1、工具新增&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;单个文件刮削&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;。针对个别刮削失败的情况，使用文件名做番号。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 2、&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;更改&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;自定义文件夹命名、媒体库标题&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;命名规则&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Calibri';&quot;&gt; &lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://github.com/moyy996/AVDC/releases/tag/3.0&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:18pt; font-weight:600; text-decoration: underline; color:#ff0000;&quot;&gt;3.0-GUI&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:11pt; font-weight:600;&quot;&gt;2020-01-31 更新&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  1、第一个GUI版本。&lt;br /&gt;  2、两个工具-javdb爬虫、视频移动。&lt;br /&gt;  3、可视化编辑config.ini。&lt;br /&gt;  4、多层目录刮削，增加&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;排除目录&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;选项。&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:10.5pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:10.5pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="page_log">
-     <widget class="QTextBrowser" name="textBrowser_log_main">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>20</y>
-        <width>761</width>
-        <height>681</height>
-       </rect>
-      </property>
-     </widget>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="widget_setting" native="true">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>221</width>
-      <height>721</height>
-     </rect>
-    </property>
-    <widget class="QLabel" name="label_ico">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>380</y>
-       <width>201</width>
-       <height>321</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>图标</string>
-     </property>
-    </widget>
-    <widget class="QWidget" name="layoutWidget">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>201</width>
-       <height>360</height>
-      </rect>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout">
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout">
-        <item>
-         <widget class="QPushButton" name="pushButton_close">
-          <property name="text">
-           <string>X</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_min">
-          <property name="text">
-           <string>-</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; 1、第一个GUI版本。&lt;br /&gt; 2、两个工具-javdb爬虫、视频移动。&lt;br /&gt; 3、可视化编辑config.ini。&lt;br /&gt; 4、多层目录刮削，增加&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;排除目录&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;选项。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Calibri';&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Calibri';&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>
        </layout>
-      </item>
-      <item>
-       <spacer name="verticalSpacer">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_main">
-        <property name="text">
-         <string>主界面</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer name="verticalSpacer_4">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_log">
-        <property name="text">
-         <string>日志</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer name="verticalSpacer_2">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_tool">
-        <property name="text">
-         <string>工具</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer name="verticalSpacer_3">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_setting">
-        <property name="text">
-         <string>设置</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer name="verticalSpacer_5">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_about">
-        <property name="text">
-         <string>关于</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </widget>
+      </widget>
+      <widget class="QWidget" name="page_log">
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QTextBrowser" name="textBrowser_log_main"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

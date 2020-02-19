@@ -22,7 +22,7 @@ def getActorPhoto(htmlcode):  # //*[@id="star_qdt"]/li/a/img
 
 def getTitle(htmlcode):  # 获取标题
     doc = pq(htmlcode)
-    title = str(doc('div.container h3').text())
+    title=str(doc('div.container h3').text()).replace(' ','-')
     try:
         title2 = re.sub('n\d+-', '', title)
         return title2

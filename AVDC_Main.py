@@ -34,7 +34,7 @@ class MyMAinWindow(QMainWindow, Ui_AVDV):
         self.Ui.setupUi(self)  # 初始化Ui
         self.Init_Ui()
         # 初始化需要的变量
-        self.version = '3.71'
+        self.version = '3.72'
         self.m_drag = False
         self.m_DragPosition = 0
         self.item_succ = self.Ui.treeWidget_number.topLevelItem(0)
@@ -51,7 +51,7 @@ class MyMAinWindow(QMainWindow, Ui_AVDV):
         self.Ui.progressBar_avdc.setValue(0)  # 进度条清0
         self.progressBarValue.connect(self.set_processbar)
         self.Ui.progressBar_avdc.setTextVisible(False)  # 不显示进度条文字
-        self.setWindowFlag(QtCore.Qt.FramelessWindowHint)  # 隐藏边框
+        # self.setWindowFlag(QtCore.Qt.FramelessWindowHint)  # 隐藏边框
         # self.setWindowOpacity(0.9)  # 设置窗口透明度
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)  # 设置窗口背景透明
         self.Ui.treeWidget_number.expandAll()
@@ -71,7 +71,7 @@ class MyMAinWindow(QMainWindow, Ui_AVDV):
                     border-radius:15px;
                     padding:2px 4px;
             }
-            
+        
             ''')
         self.Ui.centralwidget.setStyleSheet(
             '''
@@ -81,7 +81,7 @@ class MyMAinWindow(QMainWindow, Ui_AVDV):
                     width:300px;
                     border-radius:20px;
                     padding:2px 4px;
-            }            
+            }
             QTextBrowser{
                     border:1px solid gray;
                     background:white;
@@ -95,21 +95,21 @@ class MyMAinWindow(QMainWindow, Ui_AVDV):
                     width:300px;
                     border-radius:10px;
                     padding:2px 4px;
-            }            
+            }
             QTextBrowser#textBrowser_about{
                     background:white;
                     border:1px solid white;
                     width:300px;
                     border-radius:10px;
                     padding:2px 4px;
-            }            
+            }
             QTextBrowser#textBrowser_warning{
                     background:gray;
                     border:1px solid gray;
                     width:300px;
                     border-radius:10px;
                     padding:2px 4px;
-            }            
+            }
             QPushButton#pushButton_start_cap,#pushButton_move_mp4,#pushButton_select_file,#pushButton_select_fanart{
                     font-size:20px;
                     background:#F0F8FF;
@@ -995,18 +995,21 @@ class MyMAinWindow(QMainWindow, Ui_AVDV):
             if os.path.exists(path_old + '/' + filename + '.srt'):  # 字幕移动
                 os.rename(path_old + '/' + filename + '.srt', path + '/' + naming_rule + '.srt')
                 self.add_text_main('[+]Sub moved!         ' + naming_rule + '.srt')
-                return
+                return True
             elif os.path.exists(path_old + '/' + filename + '.ass'):  # 字幕移动
                 os.rename(path_old + '/' + filename + '.ass', path + '/' + naming_rule + '.ass')
                 self.add_text_main('[+]Sub moved!         ' + naming_rule + '.ass')
-                return
+                return True
             elif os.path.exists(path_old + '/' + filename + '.sub'):  # 字幕移动
                 os.rename(path_old + '/' + filename + '.sub', path + '/' + naming_rule + '.sub')
                 self.add_text_main('[+]Sub moved!         ' + naming_rule + '.sub')
-                return
+                return True
+        except FileExistsError as error_info:
+            self.add_text_main('[-]File exists in target folder @pasteFileToFolder: ' + str(error_info))
+            return False
         except Exception as error_info:
             self.add_text_main('[-]Error in pasteFileToFolder: ' + str(error_info))
-
+            return False
     # ========================================================================获取分集序号
     def get_part(self, filepath, failed_folder):
         try:
@@ -1174,10 +1177,12 @@ class MyMAinWindow(QMainWindow, Ui_AVDV):
             self.cutImage(option, json_data['imagecut'], path, naming_rule)  # 裁剪图
             self.copyRenameJpgToBackdrop(option, path, naming_rule)
             self.PrintFiles(option, path, naming_rule, cn_sub, json_data, filepath, failed_folder)  # 打印文件
-            self.pasteFileToFolder(filepath, path, naming_rule, number, Config)  # 移动文件
+            ret = self.pasteFileToFolder(filepath, path, naming_rule, number, Config)  # 移动文件
             # =======================================================================整理模式
         elif program_mode == '2':
-            self.pasteFileToFolder(filepath, path, naming_rule, number, Config)  # 移动文件
+            ret = self.pasteFileToFolder(filepath, path, naming_rule, number, Config)  # 移动文件
+        if not ret:
+            self.moveFailedFolder(filepath,failed_folder)
         # =======================================================================json添加封面项
         fanart_path = ''
         poster_path = ''
